@@ -9,11 +9,20 @@ const Layout = (props) => {
     <Fragment>
       <div id="wrap">
         <Header />
-        <div className="container">
-          { children }
+        <div className="content">
+          <div className="container">
+            { children }
+          </div>
         </div>
         <Footer />
       </div>
+      <style jsx>
+        {`
+          .content {
+            background-color:#fafafa;
+          }
+        `}
+      </style>
     </Fragment>
   );
 };

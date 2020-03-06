@@ -27,7 +27,7 @@ const Footer = (props) => (
     </div>
     <style jsx>
       {`
-      #footer {border-top:1px solid #ced4da}
+      #footer {border-top:1px solid #ced4da;clear:both}
       .footer {text-align: center;padding:20px 50px;}
       .footer li {position:relative; display: inline;padding:0 7px 0 10px; white-space: nowrap;}
       .footer li:first-child::before{width: 0;}
