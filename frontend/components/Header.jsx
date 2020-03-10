@@ -14,7 +14,9 @@ const Header = (props) => {
       <div id="header">
         <div className="container">
           <div className="logo">
-            <span>DS</span>
+            <Link href="/">
+              <span>DS</span>
+            </Link>
           </div>
           <div className="search">
             <InputGroup className="mb-3" id="header_search_input">
@@ -64,6 +66,8 @@ const Header = (props) => {
             background-color:black;
             padding:10px;
             font-size:20px;
+            font-weight:700;
+            cursor:pointer;
           }
           .search{
             position:relative;

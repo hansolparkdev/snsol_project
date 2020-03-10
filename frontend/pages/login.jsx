@@ -20,12 +20,9 @@ const Login = (props) => {
         upw: password,
       },
     ).then((response) => {
-      // console.log(response);
-      if (response.data.id === 'admin') {
-        props.history.push('/');
-      }
+      console.log(response);
     }).catch((err) => {
-      console.log(err);
+      alert(err.response.data);
       idInput.current.value = '';
       pwInput.current.value = '';
       idInput.current.focus();

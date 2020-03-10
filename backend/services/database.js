@@ -5,7 +5,7 @@ const pool = mysql.createPool({
   user: 'root',
   password: 's3tdev',
   port: 3306,
-  database: 'portfolio_db',
+  database: 'snsol_db',
 });
 
 module.exports.pool = pool;

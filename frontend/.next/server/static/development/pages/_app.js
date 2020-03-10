@@ -213,15 +213,17 @@ const Header = props => {
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, __jsx("div", {
     id: "header",
-    className: "jsx-2577731623"
+    className: "jsx-3167871876"
   }, __jsx("div", {
-    className: "jsx-2577731623" + " " + "container"
+    className: "jsx-3167871876" + " " + "container"
   }, __jsx("div", {
-    className: "jsx-2577731623" + " " + "logo"
+    className: "jsx-3167871876" + " " + "logo"
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/"
   }, __jsx("span", {
-    className: "jsx-2577731623"
-  }, "DS")), __jsx("div", {
-    className: "jsx-2577731623" + " " + "search"
+    className: "jsx-3167871876"
+  }, "DS"))), __jsx("div", {
+    className: "jsx-3167871876" + " " + "search"
   }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["InputGroup"], {
     className: "mb-3",
     id: "header_search_input"
@@ -234,26 +236,26 @@ const Header = props => {
     onClick: onClick
   }, __jsx("i", {
     "aria-hidden": "false",
-    className: "jsx-2577731623" + " " + "fa fa-search"
+    className: "jsx-3167871876" + " " + "fa fa-search"
   })))), __jsx("div", {
-    className: "jsx-2577731623" + " " + "menu"
+    className: "jsx-3167871876" + " " + "menu"
   }, __jsx("ul", {
-    className: "jsx-2577731623"
+    className: "jsx-3167871876"
   }, __jsx("li", {
-    className: "jsx-2577731623"
+    className: "jsx-3167871876"
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/"
   }, __jsx("a", {
-    className: "jsx-2577731623"
+    className: "jsx-3167871876"
   }, "Index"))), __jsx("li", {
-    className: "jsx-2577731623"
+    className: "jsx-3167871876"
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/login"
   }, __jsx("a", {
-    className: "jsx-2577731623"
+    className: "jsx-3167871876"
   }, "Login"))))))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "2577731623"
-  }, "#header.jsx-2577731623{border-bottom:1px solid #ced4da;}.container.jsx-2577731623{overflow:hidden;}.logo.jsx-2577731623{float:left;width:120px;color:white;margin-right:50px;}.logo.jsx-2577731623 span.jsx-2577731623{line-height:55px;background-color:black;padding:10px;font-size:20px;}.search.jsx-2577731623{position:relative;top:8px;float:left;width:400px;margin-right:50px;}.menu.jsx-2577731623{float:right;}.menu.jsx-2577731623 ul.jsx-2577731623{line-height:55px;}.menu.jsx-2577731623 li.jsx-2577731623{display:inline;margin-left:50px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcSGVhZGVyLmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFnRFMsQUFHNEMsQUFHaEIsQUFHTCxBQU1NLEFBTUMsQUFPTixBQUVZLEFBQ0QsV0FyQlgsQ0FtQmIsR0FFeUMsQ0F4QnpDLENBU3dCLEFBY0UsQ0FSakIsS0FYSSxHQVlELE1BbkJaLEFBMkIwQyxHQW5CdkIsRUFZTixHQVBDLFNBUUssSUFabkIsQUFLZ0IsY0FRaEIsQ0FQQSIsImZpbGUiOiJEOlxcRGVza3RvcFxcc25zb2xfcHJvamVjdFxcZnJvbnRlbmRcXGNvbXBvbmVudHNcXEhlYWRlci5qc3giLCJzb3VyY2VzQ29udGVudCI6WyIvKiBlc2xpbnQtZGlzYWJsZSBuby1hbGVydCAqL1xyXG4vKiBlc2xpbnQtZGlzYWJsZSBqc3gtYTExeS9hbmNob3ItaXMtdmFsaWQgKi9cclxuaW1wb3J0IFJlYWN0LCB7IEZyYWdtZW50IH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnO1xyXG5pbXBvcnQgeyBCdXR0b24sIElucHV0R3JvdXAsIEZvcm1Db250cm9sIH0gZnJvbSAncmVhY3QtYm9vdHN0cmFwJztcclxuXHJcbmNvbnN0IEhlYWRlciA9IChwcm9wcykgPT4ge1xyXG4gIC8vIGNvbnNvbGUubG9nKEJ1dHRvbik7XHJcbiAgY29uc3Qgb25DbGljayA9ICgpID0+IHtcclxuICAgIGFsZXJ0KCdidXR0b24gQ2xpY2snKTtcclxuICB9O1xyXG4gIHJldHVybiAoXHJcbiAgICA8RnJhZ21lbnQ+XHJcbiAgICAgIDxkaXYgaWQ9XCJoZWFkZXJcIj5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxyXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJsb2dvXCI+XHJcbiAgICAgICAgICAgIDxzcGFuPkRTPC9zcGFuPlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlYXJjaFwiPlxyXG4gICAgICAgICAgICA8SW5wdXRHcm91cCBjbGFzc05hbWU9XCJtYi0zXCIgaWQ9XCJoZWFkZXJfc2VhcmNoX2lucHV0XCI+XHJcbiAgICAgICAgICAgICAgPEZvcm1Db250cm9sXHJcbiAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIlVzZXJuYW1lXCJcclxuICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9XCJVc2VybmFtZVwiXHJcbiAgICAgICAgICAgICAgICBhcmlhLWRlc2NyaWJlZGJ5PVwiYmFzaWMtYWRkb24xXCJcclxuICAgICAgICAgICAgICAgIGlkPVwiaGVsbG9cIlxyXG4gICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgPEJ1dHRvbiBvbkNsaWNrPXtvbkNsaWNrfT5cclxuICAgICAgICAgICAgICAgIDxpIGNsYXNzTmFtZT1cImZhIGZhLXNlYXJjaFwiIGFyaWEtaGlkZGVuPVwiZmFsc2VcIiAvPlxyXG4gICAgICAgICAgICAgIDwvQnV0dG9uPlxyXG4gICAgICAgICAgICA8L0lucHV0R3JvdXA+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWVudVwiPlxyXG4gICAgICAgICAgICA8dWw+XHJcbiAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cclxuICAgICAgICAgICAgICAgICAgPGE+SW5kZXg8L2E+XHJcbiAgICAgICAgICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgICA8bGk+XHJcbiAgICAgICAgICAgICAgICA8TGluayBocmVmPVwiL2xvZ2luXCI+XHJcbiAgICAgICAgICAgICAgICAgIDxhPkxvZ2luPC9hPlxyXG4gICAgICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgIDwvdWw+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxzdHlsZSBqc3g+XHJcbiAgICAgICAge2BcclxuICAgICAgICAgICNoZWFkZXIge1xyXG4gICAgICAgICAgICBib3JkZXItYm90dG9tOjFweCBzb2xpZCAjY2VkNGRhO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLmNvbnRhaW5lcntcclxuICAgICAgICAgICAgb3ZlcmZsb3c6aGlkZGVuO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLmxvZ297XHJcbiAgICAgICAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgICAgICAgICAgIHdpZHRoOjEyMHB4O1xyXG4gICAgICAgICAgICBjb2xvcjp3aGl0ZTtcclxuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OjUwcHg7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICAubG9nbyBzcGFue1xyXG4gICAgICAgICAgICBsaW5lLWhlaWdodDo1NXB4O1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOmJsYWNrO1xyXG4gICAgICAgICAgICBwYWRkaW5nOjEwcHg7XHJcbiAgICAgICAgICAgIGZvbnQtc2l6ZToyMHB4O1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLnNlYXJjaHtcclxuICAgICAgICAgICAgcG9zaXRpb246cmVsYXRpdmU7XHJcbiAgICAgICAgICAgIHRvcDo4cHg7XHJcbiAgICAgICAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgICAgICAgICAgIHdpZHRoOjQwMHB4O1xyXG4gICAgICAgICAgICBtYXJnaW4tcmlnaHQ6NTBweDtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIC5tZW51e1xyXG4gICAgICAgICAgICBmbG9hdDpyaWdodDtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIC5tZW51IHVseyBsaW5lLWhlaWdodDo1NXB4O31cclxuICAgICAgICAgIC5tZW51IGxpeyBkaXNwbGF5OiBpbmxpbmU7IG1hcmdpbi1sZWZ0OjUwcHg7fVxyXG4gICAgICAgIGB9XHJcbiAgICAgIDwvc3R5bGU+XHJcbiAgICA8L0ZyYWdtZW50PlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIZWFkZXI7XHJcbiJdfQ== */\n/*@ sourceURL=D:\\\\Desktop\\\\snsol_project\\\\frontend\\\\components\\\\Header.jsx */"));
+    id: "3167871876"
+  }, "#header.jsx-3167871876{border-bottom:1px solid #ced4da;}.container.jsx-3167871876{overflow:hidden;}.logo.jsx-3167871876{float:left;width:120px;color:white;margin-right:50px;}.logo.jsx-3167871876 span.jsx-3167871876{line-height:55px;background-color:black;padding:10px;font-size:20px;font-weight:700;cursor:pointer;}.search.jsx-3167871876{position:relative;top:8px;float:left;width:400px;margin-right:50px;}.menu.jsx-3167871876{float:right;}.menu.jsx-3167871876 ul.jsx-3167871876{line-height:55px;}.menu.jsx-3167871876 li.jsx-3167871876{display:inline;margin-left:50px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcSGVhZGVyLmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrRFMsQUFHNEMsQUFHaEIsQUFHTCxBQU1NLEFBUUMsQUFPTixBQUVZLEFBQ0QsV0F2QlgsQ0FxQmIsR0FFeUMsQ0ExQnpDLENBU3dCLEFBZ0JFLENBUmpCLEtBYkksR0FjRCxNQXJCWixBQTZCMEMsR0FyQnZCLEVBY04sR0FUQyxTQVVLLElBZG5CLEFBS2dCLGNBVWhCLENBVGlCLGdCQUNELGVBQ2hCIiwiZmlsZSI6IkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcSGVhZGVyLmpzeCIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG5vLWFsZXJ0ICovXHJcbi8qIGVzbGludC1kaXNhYmxlIGpzeC1hMTF5L2FuY2hvci1pcy12YWxpZCAqL1xyXG5pbXBvcnQgUmVhY3QsIHsgRnJhZ21lbnQgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluayc7XHJcbmltcG9ydCB7IEJ1dHRvbiwgSW5wdXRHcm91cCwgRm9ybUNvbnRyb2wgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xyXG5cclxuY29uc3QgSGVhZGVyID0gKHByb3BzKSA9PiB7XHJcbiAgLy8gY29uc29sZS5sb2coQnV0dG9uKTtcclxuICBjb25zdCBvbkNsaWNrID0gKCkgPT4ge1xyXG4gICAgYWxlcnQoJ2J1dHRvbiBDbGljaycpO1xyXG4gIH07XHJcbiAgcmV0dXJuIChcclxuICAgIDxGcmFnbWVudD5cclxuICAgICAgPGRpdiBpZD1cImhlYWRlclwiPlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxvZ29cIj5cclxuICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cclxuICAgICAgICAgICAgICA8c3Bhbj5EUzwvc3Bhbj5cclxuICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlYXJjaFwiPlxyXG4gICAgICAgICAgICA8SW5wdXRHcm91cCBjbGFzc05hbWU9XCJtYi0zXCIgaWQ9XCJoZWFkZXJfc2VhcmNoX2lucHV0XCI+XHJcbiAgICAgICAgICAgICAgPEZvcm1Db250cm9sXHJcbiAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIlVzZXJuYW1lXCJcclxuICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9XCJVc2VybmFtZVwiXHJcbiAgICAgICAgICAgICAgICBhcmlhLWRlc2NyaWJlZGJ5PVwiYmFzaWMtYWRkb24xXCJcclxuICAgICAgICAgICAgICAgIGlkPVwiaGVsbG9cIlxyXG4gICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgPEJ1dHRvbiBvbkNsaWNrPXtvbkNsaWNrfT5cclxuICAgICAgICAgICAgICAgIDxpIGNsYXNzTmFtZT1cImZhIGZhLXNlYXJjaFwiIGFyaWEtaGlkZGVuPVwiZmFsc2VcIiAvPlxyXG4gICAgICAgICAgICAgIDwvQnV0dG9uPlxyXG4gICAgICAgICAgICA8L0lucHV0R3JvdXA+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWVudVwiPlxyXG4gICAgICAgICAgICA8dWw+XHJcbiAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cclxuICAgICAgICAgICAgICAgICAgPGE+SW5kZXg8L2E+XHJcbiAgICAgICAgICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgICA8bGk+XHJcbiAgICAgICAgICAgICAgICA8TGluayBocmVmPVwiL2xvZ2luXCI+XHJcbiAgICAgICAgICAgICAgICAgIDxhPkxvZ2luPC9hPlxyXG4gICAgICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgIDwvdWw+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxzdHlsZSBqc3g+XHJcbiAgICAgICAge2BcclxuICAgICAgICAgICNoZWFkZXIge1xyXG4gICAgICAgICAgICBib3JkZXItYm90dG9tOjFweCBzb2xpZCAjY2VkNGRhO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLmNvbnRhaW5lcntcclxuICAgICAgICAgICAgb3ZlcmZsb3c6aGlkZGVuO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLmxvZ297XHJcbiAgICAgICAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgICAgICAgICAgIHdpZHRoOjEyMHB4O1xyXG4gICAgICAgICAgICBjb2xvcjp3aGl0ZTtcclxuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OjUwcHg7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICAubG9nbyBzcGFue1xyXG4gICAgICAgICAgICBsaW5lLWhlaWdodDo1NXB4O1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOmJsYWNrO1xyXG4gICAgICAgICAgICBwYWRkaW5nOjEwcHg7XHJcbiAgICAgICAgICAgIGZvbnQtc2l6ZToyMHB4O1xyXG4gICAgICAgICAgICBmb250LXdlaWdodDo3MDA7XHJcbiAgICAgICAgICAgIGN1cnNvcjpwb2ludGVyO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLnNlYXJjaHtcclxuICAgICAgICAgICAgcG9zaXRpb246cmVsYXRpdmU7XHJcbiAgICAgICAgICAgIHRvcDo4cHg7XHJcbiAgICAgICAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgICAgICAgICAgIHdpZHRoOjQwMHB4O1xyXG4gICAgICAgICAgICBtYXJnaW4tcmlnaHQ6NTBweDtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIC5tZW51e1xyXG4gICAgICAgICAgICBmbG9hdDpyaWdodDtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIC5tZW51IHVseyBsaW5lLWhlaWdodDo1NXB4O31cclxuICAgICAgICAgIC5tZW51IGxpeyBkaXNwbGF5OiBpbmxpbmU7IG1hcmdpbi1sZWZ0OjUwcHg7fVxyXG4gICAgICAgIGB9XHJcbiAgICAgIDwvc3R5bGU+XHJcbiAgICA8L0ZyYWdtZW50PlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIZWFkZXI7XHJcbiJdfQ== */\n/*@ sourceURL=D:\\\\Desktop\\\\snsol_project\\\\frontend\\\\components\\\\Header.jsx */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -2039,6 +2041,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../redux/store */ "./redux/store.js");
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* eslint-disable no-shadow */
@@ -2051,7 +2054,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
- // import store from '../redux/store';
+
 
 moment__WEBPACK_IMPORTED_MODULE_4___default.a.locale('ko'); // class RootApp extends App {
 //   static async getInitialProps({ Component, ctx }) {
@@ -2082,7 +2085,9 @@ const RootApp = props => {
     pageProps,
     store
   } = props;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, __jsx("title", null, "Devsol Blog")), __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, __jsx(Component, pageProps)));
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, __jsx("title", null, "Devsol Blog")), __jsx(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
+    store: store
+  }, __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, __jsx(Component, pageProps))));
 };
 
 RootApp.getInitialProps = async context => {
@@ -2097,10 +2102,294 @@ RootApp.getInitialProps = async context => {
   return {
     pageProps
   };
-}; // export default withRedux(() => (store))(RootApp);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2___default()(() => _redux_store__WEBPACK_IMPORTED_MODULE_7__["default"])(RootApp)); // export default RootApp;
+
+/***/ }),
+
+/***/ "./redux/reducers/counterReducer.js":
+/*!******************************************!*\
+  !*** ./redux/reducers/counterReducer.js ***!
+  \******************************************/
+/*! exports provided: INCREMENT_COUNTER, DECREMENT_COUNTER, increment, decrement, initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INCREMENT_COUNTER", function() { return INCREMENT_COUNTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DECREMENT_COUNTER", function() { return DECREMENT_COUNTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "increment", function() { return increment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "decrement", function() { return decrement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// Action Types
+const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+const DECREMENT_COUNTER = 'DECREMENT_COUNTER'; // Action Creator
+
+const increment = () => ({
+  type: INCREMENT_COUNTER
+});
+const decrement = () => ({
+  type: DECREMENT_COUNTER
+});
+const initialState = {
+  value: 1
+};
+
+const counterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREMENT_COUNTER:
+      return _objectSpread({}, state, {
+        value: state.value + 1
+      });
+
+    case DECREMENT_COUNTER:
+      return _objectSpread({}, state, {
+        value: state.value - 1
+      });
+
+    default:
+      return _objectSpread({}, state);
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (counterReducer);
+
+/***/ }),
+
+/***/ "./redux/reducers/rootReducer.js":
+/*!***************************************!*\
+  !*** ./redux/reducers/rootReducer.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "redux");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _counterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./counterReducer */ "./redux/reducers/counterReducer.js");
+/* harmony import */ var _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sagaCounterReducer */ "./redux/reducers/sagaCounterReducer.js");
+/* harmony import */ var _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./thunkCounterReducer */ "./redux/reducers/thunkCounterReducer.js");
 
 
-/* harmony default export */ __webpack_exports__["default"] = (RootApp);
+
+
+const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  counter: _counterReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  sagaCounter: _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  thunkCounter: _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
+/* harmony default export */ __webpack_exports__["default"] = (rootReducer);
+
+/***/ }),
+
+/***/ "./redux/reducers/sagaCounterReducer.js":
+/*!**********************************************!*\
+  !*** ./redux/reducers/sagaCounterReducer.js ***!
+  \**********************************************/
+/*! exports provided: SAGA_UP, SAGA_DOWN, SAGA_UP_ASYNC, SAGA_DOWN_ASYNC, sagaIncrement, sagaDecrement, initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SAGA_UP", function() { return SAGA_UP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SAGA_DOWN", function() { return SAGA_DOWN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SAGA_UP_ASYNC", function() { return SAGA_UP_ASYNC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SAGA_DOWN_ASYNC", function() { return SAGA_DOWN_ASYNC; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sagaIncrement", function() { return sagaIncrement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sagaDecrement", function() { return sagaDecrement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+const SAGA_UP = 'SAGA_UP';
+const SAGA_DOWN = 'SAGA_DOWN';
+const SAGA_UP_ASYNC = 'SAGA_UP_ASYNC';
+const SAGA_DOWN_ASYNC = 'SAGA_DOWN_ASYNC';
+const sagaIncrement = () => ({
+  type: SAGA_UP,
+  value: 1
+});
+const sagaDecrement = () => ({
+  type: SAGA_DOWN,
+  value: 1
+});
+const initialState = {
+  sagaValue: 1
+};
+
+const sagaCounterReducer = (state = initialState, action) => {
+  const newState = _objectSpread({}, state);
+
+  switch (action.type) {
+    case SAGA_UP_ASYNC:
+      newState.sagaValue += action.value;
+      break;
+
+    case SAGA_DOWN_ASYNC:
+      newState.sagaValue -= action.value;
+      break;
+
+    default:
+      return newState;
+  }
+
+  return newState;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (sagaCounterReducer);
+
+/***/ }),
+
+/***/ "./redux/reducers/thunkCounterReducer.js":
+/*!***********************************************!*\
+  !*** ./redux/reducers/thunkCounterReducer.js ***!
+  \***********************************************/
+/*! exports provided: THUNK_UP_COUNTER, THUNK_DOWN_COUNTER, thunkIncrement, thunkDecrement, thunkIncrementAsync, thunkDecrementAsync, initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THUNK_UP_COUNTER", function() { return THUNK_UP_COUNTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THUNK_DOWN_COUNTER", function() { return THUNK_DOWN_COUNTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkIncrement", function() { return thunkIncrement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkDecrement", function() { return thunkDecrement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkIncrementAsync", function() { return thunkIncrementAsync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkDecrementAsync", function() { return thunkDecrementAsync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+const THUNK_UP_COUNTER = 'THUNK_UP_COUNTER';
+const THUNK_DOWN_COUNTER = 'THUNK_DOWN_COUNTER';
+const thunkIncrement = () => ({
+  type: THUNK_UP_COUNTER,
+  value: 3
+});
+const thunkDecrement = () => ({
+  type: THUNK_DOWN_COUNTER,
+  value: 3
+});
+const thunkIncrementAsync = () => dispatch => {
+  setTimeout(() => {
+    // 1 초뒤 dispatch 합니다
+    dispatch(thunkIncrement());
+  }, 1000);
+};
+const thunkDecrementAsync = () => dispatch => {
+  setTimeout(() => {
+    // 1 초뒤 dispatch 합니다
+    dispatch(thunkDecrement());
+  }, 1000);
+};
+const initialState = {
+  value: 1,
+  sagaValue: 1,
+  thunkValue: 1
+};
+
+const thunkCounterReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case THUNK_UP_COUNTER:
+      return _objectSpread({}, state, {
+        thunkValue: state.thunkValue + action.value
+      });
+
+    case THUNK_DOWN_COUNTER:
+      return _objectSpread({}, state, {
+        thunkValue: state.thunkValue - action.value
+      });
+
+    default:
+      return _objectSpread({}, state);
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (thunkCounterReducer);
+
+/***/ }),
+
+/***/ "./redux/sagas/index.js":
+/*!******************************!*\
+  !*** ./redux/sagas/index.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return watchAgeUp; });
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers/sagaCounterReducer */ "./redux/reducers/sagaCounterReducer.js");
+
+
+
+function* sagaUpAsync() {
+  console.log('saga_up');
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["delay"])(1000);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+    type: _reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_UP_ASYNC"],
+    value: 1
+  });
+}
+
+function* sagaDownAsync() {
+  console.log('saga_down');
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["delay"])(1000);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+    type: _reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_DOWN_ASYNC"],
+    value: 1
+  });
+}
+
+function* watchAgeUp() {
+  console.log('watch');
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_UP"], sagaUpAsync);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_DOWN"], sagaDownAsync);
+}
+
+/***/ }),
+
+/***/ "./redux/store.js":
+/*!************************!*\
+  !*** ./redux/store.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "redux");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "redux-thunk");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var redux_saga__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-saga */ "redux-saga");
+/* harmony import */ var redux_saga__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_saga__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reducers_rootReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers/rootReducer */ "./redux/reducers/rootReducer.js");
+/* harmony import */ var _sagas__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sagas */ "./redux/sagas/index.js");
+
+
+
+
+
+const sagaMiddleware = redux_saga__WEBPACK_IMPORTED_MODULE_2___default()();
+const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_rootReducer__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(sagaMiddleware, redux_thunk__WEBPACK_IMPORTED_MODULE_1___default.a));
+sagaMiddleware.run(_sagas__WEBPACK_IMPORTED_MODULE_4__["default"]);
+/* harmony default export */ __webpack_exports__["default"] = (store);
 
 /***/ }),
 
@@ -2267,6 +2556,50 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("react-redux");
+
+/***/ }),
+
+/***/ "redux":
+/*!************************!*\
+  !*** external "redux" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
+
+/***/ }),
+
+/***/ "redux-saga":
+/*!*****************************!*\
+  !*** external "redux-saga" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-saga");
+
+/***/ }),
+
+/***/ "redux-saga/effects":
+/*!*************************************!*\
+  !*** external "redux-saga/effects" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-saga/effects");
+
+/***/ }),
+
+/***/ "redux-thunk":
+/*!******************************!*\
+  !*** external "redux-thunk" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("redux-thunk");
 
 /***/ }),
 

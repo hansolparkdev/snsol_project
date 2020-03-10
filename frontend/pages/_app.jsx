@@ -8,8 +8,7 @@ import Head from 'next/head';
 import moment from 'moment';
 import Layout from '../components/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import store from '../redux/store';
+import store from '../redux/store';
 
 moment.locale('ko');
 
@@ -45,9 +44,11 @@ const RootApp = (props) => {
       <Head>
         <title>Devsol Blog</title>
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Provider store={store}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </Provider>
     </Fragment>
   );
 };
@@ -61,5 +62,5 @@ RootApp.getInitialProps = async (context) => {
   return { pageProps };
 };
 
-// export default withRedux(() => (store))(RootApp);
-export default RootApp;
+export default withRedux(() => (store))(RootApp);
+// export default RootApp;

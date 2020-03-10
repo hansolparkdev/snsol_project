@@ -15,6 +15,9 @@ export default class RootDocument extends Document {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/railscasts.min.css" />
           <link rel="stylesheet" href="../static/css/font-awesome.css" />
           <link rel="shoutcut icon" href="../static/img/favicon.ico" />
+          <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet" />
           <style jsx global>
             {`
               *{
