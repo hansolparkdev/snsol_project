@@ -1,11 +1,11 @@
 /*  */
 module.exports = (sequelize, DataTypes) => sequelize.define('user', {
-  uid: {
+  user_id: {
     type: DataTypes.STRING(20), // VARCHAR
     allowNULL: false,
     unique: true,
   },
-  upassword: {
+  user_password: {
     type: DataTypes.STRING(20), // VARCHAR
     allowNULL: false,
   },
@@ -14,11 +14,7 @@ module.exports = (sequelize, DataTypes) => sequelize.define('user', {
     allowNULL: false,
   },
   age: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNULL: false,
-  },
-  married: {
-    type: DataTypes.BOOLEAN, // TINYINT
+    type: DataTypes.INTEGER,
     allowNULL: false,
   },
   comment: {

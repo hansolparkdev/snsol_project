@@ -1,26 +1,48 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useRef } from 'react';
 import Link from 'next/link';
+import axios from 'axios';
+import { Button, InputGroup, FormControl } from 'react-bootstrap';
 
-const Login = () => {
+
+const Login = (props) => {
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
+  const idInput = useRef();
+  const pwInput = useRef();
+
   const loginSubmitForm = (e) => {
     e.preventDefault();
-    console.log(id);
-    console.log(password);
+    axios.post(
+      'http://127.0.0.1:3001/auth/signin',
+      {
+        uid: id,
+        upw: password,
+      },
+    ).then((response) => {
+      // console.log(response);
+      if (response.data.id === 'admin') {
+        props.history.push('/');
+      }
+    }).catch((err) => {
+      console.log(err);
+      idInput.current.value = '';
+      pwInput.current.value = '';
+      idInput.current.focus();
+    });
   };
   return (
     <div className="loginForm">
       <h1>로그인</h1>
       <form onSubmit={loginSubmitForm}>
         <div>
-          <input type="text" value={id} onChange={(e) => setId(e.target.value)} id="uid" />
+          <input type="text" ref={idInput} value={id} onChange={(e) => setId(e.target.value)} id="uid" />
         </div>
         <div>
-          <input type="password" autoComplete="on" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" ref={pwInput} autoComplete="on" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button type="submit">전송</button>
+        <Button size="lg" block type="submit">로그인</Button>
+        <Button size="lg" variant="warning" block type="button">KaKao 로그인</Button>
       </form>
       <div>
         <Link href="/">
@@ -48,15 +70,14 @@ const Login = () => {
             margin:20px 0;
           }
           .loginForm input{
-            border-top:1px solid #BDBDBD;
-            border-left:1px solid #BDBDBD;
-            border-right:1px solid #BDBDBD;
-            border-bottom:0;
             padding:10px;
           }
-          .loginForm input, .loginForm button{
+          .loginForm input{
             width:100%;
             height:50px;
+            margin:5px 0px;
+            border-radius: 5px;
+            border: 1px solid #BDBDBD
           }
         `}
       </style>
