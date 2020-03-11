@@ -1,11 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { Fragment, useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import axios from 'axios';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import { thunkIncrementAsync } from '../redux/reducers/loginReducer';
 
 
 const Login = (props) => {
+  const login = useSelector((state) => state.login, []);
+  useEffect(() => {
+    console.log(login);
+  }, [login]);
+  const dispatch = useDispatch();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
   const idInput = useRef();
@@ -13,20 +20,7 @@ const Login = (props) => {
 
   const loginSubmitForm = (e) => {
     e.preventDefault();
-    axios.post(
-      'http://127.0.0.1:3001/auth/signin',
-      {
-        uid: id,
-        upw: password,
-      },
-    ).then((response) => {
-      console.log(response);
-    }).catch((err) => {
-      alert(err.response.data);
-      idInput.current.value = '';
-      pwInput.current.value = '';
-      idInput.current.focus();
-    });
+    dispatch(thunkIncrementAsync(id, password));
   };
   return (
     <div className="loginForm">

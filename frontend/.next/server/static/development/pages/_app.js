@@ -2163,6 +2163,80 @@ const counterReducer = (state = initialState, action) => {
 
 /***/ }),
 
+/***/ "./redux/reducers/loginReducer.js":
+/*!****************************************!*\
+  !*** ./redux/reducers/loginReducer.js ***!
+  \****************************************/
+/*! exports provided: THUNK_LOGIN_SUCCESS, THUNK_LOGIN_ERROR, thunkLoginSuccess, thunkLoginError, thunkIncrementAsync, initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THUNK_LOGIN_SUCCESS", function() { return THUNK_LOGIN_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THUNK_LOGIN_ERROR", function() { return THUNK_LOGIN_ERROR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkLoginSuccess", function() { return thunkLoginSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkLoginError", function() { return thunkLoginError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkIncrementAsync", function() { return thunkIncrementAsync; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+const THUNK_LOGIN_SUCCESS = 'THUNK_LOGIN_SUCCESS';
+const THUNK_LOGIN_ERROR = 'THUNK_LOGIN_ERROR';
+const thunkLoginSuccess = data => ({
+  type: THUNK_LOGIN_SUCCESS,
+  data
+});
+const thunkLoginError = data => ({
+  type: THUNK_LOGIN_ERROR,
+  data
+});
+const thunkIncrementAsync = (id, pw) => dispatch => {
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://127.0.0.1:3001/auth/signin', {
+    uid: id,
+    upw: pw
+  }).then(response => {
+    console.log(response);
+    dispatch(thunkLoginSuccess(response));
+  }).catch(err => {
+    alert(err.response.data);
+    dispatch(thunkLoginError(err.response.data)); // idInput.current.value = '';
+    // pwInput.current.value = '';
+    // idInput.current.focus();
+  });
+};
+const initialState = {
+  loginState: false,
+  loginErrorMsg: ''
+};
+
+const loginReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case THUNK_LOGIN_SUCCESS:
+      return _objectSpread({}, state, {
+        loginState: true
+      });
+
+    case THUNK_LOGIN_ERROR:
+      return _objectSpread({}, state, {
+        loginErrorMsg: action.data
+      });
+
+    default:
+      return _objectSpread({}, state);
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (loginReducer);
+
+/***/ }),
+
 /***/ "./redux/reducers/rootReducer.js":
 /*!***************************************!*\
   !*** ./redux/reducers/rootReducer.js ***!
@@ -2177,6 +2251,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _counterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./counterReducer */ "./redux/reducers/counterReducer.js");
 /* harmony import */ var _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sagaCounterReducer */ "./redux/reducers/sagaCounterReducer.js");
 /* harmony import */ var _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./thunkCounterReducer */ "./redux/reducers/thunkCounterReducer.js");
+/* harmony import */ var _loginReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./loginReducer */ "./redux/reducers/loginReducer.js");
+
 
 
 
@@ -2184,7 +2260,8 @@ __webpack_require__.r(__webpack_exports__);
 const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   counter: _counterReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   sagaCounter: _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  thunkCounter: _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  thunkCounter: _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  login: _loginReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -2287,17 +2364,15 @@ const thunkIncrementAsync = () => dispatch => {
   setTimeout(() => {
     // 1 초뒤 dispatch 합니다
     dispatch(thunkIncrement());
-  }, 1000);
+  }, 100);
 };
 const thunkDecrementAsync = () => dispatch => {
   setTimeout(() => {
     // 1 초뒤 dispatch 합니다
     dispatch(thunkDecrement());
-  }, 1000);
+  }, 100);
 };
 const initialState = {
-  value: 1,
-  sagaValue: 1,
   thunkValue: 1
 };
 
@@ -2402,6 +2477,17 @@ sagaMiddleware.run(_sagas__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.jsx */"./pages/_app.jsx");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 

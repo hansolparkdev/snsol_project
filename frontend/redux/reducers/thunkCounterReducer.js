@@ -17,19 +17,17 @@ export const thunkIncrementAsync = () => (dispatch) => {
   setTimeout(() => {
     // 1 초뒤 dispatch 합니다
     dispatch(thunkIncrement());
-  }, 1000);
+  }, 100);
 };
 
 export const thunkDecrementAsync = () => (dispatch) => {
   setTimeout(() => {
     // 1 초뒤 dispatch 합니다
     dispatch(thunkDecrement());
-  }, 1000);
+  }, 100);
 };
 
 export const initialState = {
-  value: 1,
-  sagaValue: 1,
   thunkValue: 1,
 };
 
