@@ -2036,20 +2036,22 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-redux-wrapper */ "next-redux-wrapper");
-/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "moment");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../redux/store */ "./redux/store.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-redux-wrapper */ "next-redux-wrapper");
+/* harmony import */ var next_redux_wrapper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_redux_wrapper__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment */ "moment");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _redux_store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../redux/store */ "./redux/store.js");
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 /* eslint-disable no-shadow */
@@ -2065,28 +2067,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-moment__WEBPACK_IMPORTED_MODULE_5___default.a.locale('ko'); // class RootApp extends App {
-//   static async getInitialProps({ Component, ctx }) {
-//     const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
-//     // Anything returned here can be access by the client
-//     return { pageProps };
-//   }
-//   render() {
-//     const { Component, pageProps, store } = this.props;
-//     return (
-//       <Fragment>
-//         <Head>
-//           <title>Devsol Blog</title>
-//         </Head>
-//         <Provider store={store}>
-//           <Layout>
-//             <Component {...pageProps} />
-//           </Layout>
-//         </Provider>
-//       </Fragment>
-//     );
-//   }
-// }
+
+moment__WEBPACK_IMPORTED_MODULE_6___default.a.locale('ko');
 
 const RootApp = props => {
   const {
@@ -2101,9 +2083,9 @@ const RootApp = props => {
       jssStyles.parentNode.removeChild(jssStyles);
     }
   });
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_3___default.a, null, __jsx("title", null, "Devsol Blog")), __jsx(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_4___default.a, null, __jsx("title", null, "Devsol Blog")), __jsx(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
     store: store
-  }, __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], null, __jsx(Component, pageProps))));
+  }, __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], null, __jsx(Component, pageProps))));
 };
 
 RootApp.getInitialProps = async context => {
@@ -2112,15 +2094,15 @@ RootApp.getInitialProps = async context => {
   const {
     Component,
     ctx
-  } = context;
-  const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {}; // console.log(pageProps);
+  } = context; // console.log(ctx.store.getState());
 
+  const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
   return {
     pageProps
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_2___default()(() => _redux_store__WEBPACK_IMPORTED_MODULE_8__["default"])(RootApp)); // export default RootApp;
+/* harmony default export */ __webpack_exports__["default"] = (next_redux_wrapper__WEBPACK_IMPORTED_MODULE_3___default()(() => _redux_store__WEBPACK_IMPORTED_MODULE_9__["default"])(RootApp)); // export default RootApp;
 
 /***/ }),
 
@@ -2179,80 +2161,6 @@ const counterReducer = (state = initialState, action) => {
 
 /***/ }),
 
-/***/ "./redux/reducers/loginReducer.js":
-/*!****************************************!*\
-  !*** ./redux/reducers/loginReducer.js ***!
-  \****************************************/
-/*! exports provided: THUNK_LOGIN_SUCCESS, THUNK_LOGIN_ERROR, thunkLoginSuccess, thunkLoginError, thunkIncrementAsync, initialState, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THUNK_LOGIN_SUCCESS", function() { return THUNK_LOGIN_SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THUNK_LOGIN_ERROR", function() { return THUNK_LOGIN_ERROR; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkLoginSuccess", function() { return thunkLoginSuccess; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkLoginError", function() { return thunkLoginError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thunkIncrementAsync", function() { return thunkIncrementAsync; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-const THUNK_LOGIN_SUCCESS = 'THUNK_LOGIN_SUCCESS';
-const THUNK_LOGIN_ERROR = 'THUNK_LOGIN_ERROR';
-const thunkLoginSuccess = data => ({
-  type: THUNK_LOGIN_SUCCESS,
-  data
-});
-const thunkLoginError = data => ({
-  type: THUNK_LOGIN_ERROR,
-  data
-});
-const thunkIncrementAsync = (id, pw) => dispatch => {
-  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('http://127.0.0.1:3001/auth/signin', {
-    uid: id,
-    upw: pw
-  }).then(response => {
-    console.log(response);
-    dispatch(thunkLoginSuccess(response));
-  }).catch(err => {
-    alert(err.response.data);
-    dispatch(thunkLoginError(err.response.data)); // idInput.current.value = '';
-    // pwInput.current.value = '';
-    // idInput.current.focus();
-  });
-};
-const initialState = {
-  loginState: false,
-  loginErrorMsg: ''
-};
-
-const loginReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case THUNK_LOGIN_SUCCESS:
-      return _objectSpread({}, state, {
-        loginState: true
-      });
-
-    case THUNK_LOGIN_ERROR:
-      return _objectSpread({}, state, {
-        loginErrorMsg: action.data
-      });
-
-    default:
-      return _objectSpread({}, state);
-  }
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (loginReducer);
-
-/***/ }),
-
 /***/ "./redux/reducers/rootReducer.js":
 /*!***************************************!*\
   !*** ./redux/reducers/rootReducer.js ***!
@@ -2267,17 +2175,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _counterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./counterReducer */ "./redux/reducers/counterReducer.js");
 /* harmony import */ var _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sagaCounterReducer */ "./redux/reducers/sagaCounterReducer.js");
 /* harmony import */ var _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./thunkCounterReducer */ "./redux/reducers/thunkCounterReducer.js");
-/* harmony import */ var _loginReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./loginReducer */ "./redux/reducers/loginReducer.js");
+/* harmony import */ var _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sagaLoginReducer */ "./redux/reducers/sagaLoginReducer.js");
 
 
 
+ // import loginReducer from './loginReducer';
 
 
 const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   counter: _counterReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   sagaCounter: _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   thunkCounter: _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  login: _loginReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  // login: loginReducer,
+  sagaLogin: _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -2341,6 +2251,99 @@ const sagaCounterReducer = (state = initialState, action) => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (sagaCounterReducer);
+
+/***/ }),
+
+/***/ "./redux/reducers/sagaLoginReducer.js":
+/*!********************************************!*\
+  !*** ./redux/reducers/sagaLoginReducer.js ***!
+  \********************************************/
+/*! exports provided: SET_USERNAME_STARTED, SET_PASSWORD_STARTED, DO_LOGIN_STARTED, DO_LOGIN_SUCCESS, DO_LOGIN_FAIL, SESSION_CHECK_STARTED, SET_USERNAME, SET_PASSWORD, DO_LOGIN, SESSION_CHECK, initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_USERNAME_STARTED", function() { return SET_USERNAME_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_PASSWORD_STARTED", function() { return SET_PASSWORD_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN_STARTED", function() { return DO_LOGIN_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN_SUCCESS", function() { return DO_LOGIN_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN_FAIL", function() { return DO_LOGIN_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK_STARTED", function() { return SESSION_CHECK_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_USERNAME", function() { return SET_USERNAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_PASSWORD", function() { return SET_PASSWORD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN", function() { return DO_LOGIN; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK", function() { return SESSION_CHECK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+const SET_USERNAME_STARTED = 'SET_USERNAME_STARTED';
+const SET_PASSWORD_STARTED = 'SET_PASSWORD_STARTED';
+const DO_LOGIN_STARTED = 'DO_LOGIN_STARTED';
+const DO_LOGIN_SUCCESS = 'DO_LOGIN_SUCCESS';
+const DO_LOGIN_FAIL = 'DO_LOGIN_FAIL';
+const SESSION_CHECK_STARTED = 'SESSION_CHECK_STARTED'; // SAGA Action
+
+const SET_USERNAME = 'SET_USERNAME';
+const SET_PASSWORD = 'SET_PASSWORD';
+const DO_LOGIN = 'DO_LOGIN';
+const SESSION_CHECK = 'SESSION_CHECK';
+const initialState = {
+  username: '',
+  password: '',
+  loginStatus: undefined,
+  loginErrorMsg: ''
+};
+
+const sagaLoginReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_USERNAME_STARTED:
+      {
+        return _objectSpread({}, state, {
+          username: action.payload
+        });
+      }
+
+    case SET_PASSWORD_STARTED:
+      {
+        return _objectSpread({}, state, {
+          password: action.payload
+        });
+      }
+
+    case DO_LOGIN_STARTED:
+      {
+        return _objectSpread({}, state, {
+          loginStatus: 'ongoing'
+        });
+      }
+
+    case DO_LOGIN_SUCCESS:
+      {
+        return _objectSpread({}, state, {
+          loginStatus: 'success',
+          user: action.payload
+        });
+      }
+
+    case DO_LOGIN_FAIL:
+      {
+        return _objectSpread({}, state, {
+          loginStatus: 'failed'
+        });
+      }
+
+    default:
+      {
+        return state;
+      }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (sagaLoginReducer);
 
 /***/ }),
 
@@ -2413,44 +2416,99 @@ const thunkCounterReducer = (state = initialState, action) => {
 
 /***/ }),
 
-/***/ "./redux/sagas/index.js":
+/***/ "./redux/sagas/login.js":
 /*!******************************!*\
-  !*** ./redux/sagas/index.js ***!
+  !*** ./redux/sagas/login.js ***!
   \******************************/
+/*! exports provided: watchSetUsername, watchSetUserpassword, watchLogin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSetUsername", function() { return watchSetUsername; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSetUserpassword", function() { return watchSetUserpassword; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchLogin", function() { return watchLogin; });
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/sagaLoginReducer */ "./redux/reducers/sagaLoginReducer.js");
+
+
+ // import { SAGA_SIGN_IN } from '../reducers/sagaLoginReducer';
+
+const setUsername = function* setUsername(action) {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+    type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SET_USERNAME_STARTED"],
+    payload: action.payload
+  });
+};
+
+const setPassword = function* setPassword(action) {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+    type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SET_PASSWORD_STARTED"],
+    payload: action.payload
+  });
+};
+
+const doLogin = function* doLogin(action) {
+  // yield console.log(action);
+  try {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN_STARTED"]
+    });
+    const json = {
+      uid: action.payload.username,
+      upw: action.payload.password
+    }; // console.log(json);
+
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])([axios__WEBPACK_IMPORTED_MODULE_1___default.a, 'post'], 'http://127.0.0.1:3001/auth/signin', json, {
+      withCredentials: true // 쿠키를 주고받을 수 있게됨
+
+    });
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN_SUCCESS"]
+    });
+  } catch (e) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN_FAIL"]
+    });
+  }
+}; // watch
+
+
+const watchSetUsername = function* watchSetUsername() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SET_USERNAME"], setUsername);
+};
+const watchSetUserpassword = function* watchSetUserpassword() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SET_PASSWORD"], setPassword);
+};
+const watchLogin = function* watchLogin() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN"], doLogin);
+};
+
+/***/ }),
+
+/***/ "./redux/sagas/rootSaga.js":
+/*!*********************************!*\
+  !*** ./redux/sagas/rootSaga.js ***!
+  \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return watchAgeUp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return rootSaga; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reducers/sagaCounterReducer */ "./redux/reducers/sagaCounterReducer.js");
+/* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login */ "./redux/sagas/login.js");
 
+ // all 함수를 통해 Saga들을 하나로 묶어줄수 있다.
 
-
-function* sagaUpAsync() {
-  console.log('saga_up');
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["delay"])(1000);
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-    type: _reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_UP_ASYNC"],
-    value: 1
-  });
-}
-
-function* sagaDownAsync() {
-  console.log('saga_down');
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["delay"])(1000);
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
-    type: _reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_DOWN_ASYNC"],
-    value: 1
-  });
-}
-
-function* watchAgeUp() {
-  console.log('watch');
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_UP"], sagaUpAsync);
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaCounterReducer__WEBPACK_IMPORTED_MODULE_1__["SAGA_DOWN"], sagaDownAsync);
+function* rootSaga() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchLogin"])()]);
 }
 
 /***/ }),
@@ -2471,7 +2529,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_saga__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-saga */ "redux-saga");
 /* harmony import */ var redux_saga__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_saga__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _reducers_rootReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./reducers/rootReducer */ "./redux/reducers/rootReducer.js");
-/* harmony import */ var _sagas__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sagas */ "./redux/sagas/index.js");
+/* harmony import */ var _sagas_rootSaga__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sagas/rootSaga */ "./redux/sagas/rootSaga.js");
 
 
 
@@ -2479,7 +2537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const sagaMiddleware = redux_saga__WEBPACK_IMPORTED_MODULE_2___default()();
 const store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_rootReducer__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(sagaMiddleware, redux_thunk__WEBPACK_IMPORTED_MODULE_1___default.a));
-sagaMiddleware.run(_sagas__WEBPACK_IMPORTED_MODULE_4__["default"]);
+sagaMiddleware.run(_sagas_rootSaga__WEBPACK_IMPORTED_MODULE_4__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (store);
 
 /***/ }),

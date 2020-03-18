@@ -21,14 +21,24 @@ passportConfig();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: true,
+    credentials: true, // origin,credentials 두개 트루해줘야 프론트와 쿠키주고받게됨
+  }),
+);
 
 // 세션 활성화
 app.use(
   session({
     secret: '!@#$%^&*',
-    resave: true,
+    resave: false,
     saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      secure: false, // https를 쓸때 true
+    },
+    name: 'hansol',
   }),
 );
 

@@ -9,7 +9,10 @@ const handle = app.getRequestHandler();
 app.prepare()
   .then(() => {
     const server = express();
-    server.use(cors());
+    server.use(cors({
+      origin: true,
+      credentials: true, // origin,credentials 두개 트루해줘야 프론트와 쿠키주고받게됨
+    }));
     server.get('*', cors(), (req, res) => {
       handle(req, res);
     });

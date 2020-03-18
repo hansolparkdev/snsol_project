@@ -9,7 +9,7 @@ import { TextField } from '@material-ui/core';
 import { withStyles, makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
-import { thunkIncrementAsync } from '../redux/reducers/loginReducer';
+import { SET_USERNAME, SET_PASSWORD, DO_LOGIN } from '../redux/reducers/sagaLoginReducer';
 
 const CssTextField = withStyles({
   root: {
@@ -41,25 +41,29 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Login = (props) => {
-  const login = useSelector((state) => state.login, []);
-
-  const classes = useStyles();
+  const login = useSelector((state) => state.sagaLogin, []);
+  const { loginStatus } = login;
   useEffect(() => {
-    if (login.loginState === true) {
-      Router.push('/');
-    }
-  }, [login]);
+    const fetchData = async () => {
+      const result = await axios('http://127.0.0.1:3001/auth/session_check', {
+        withCredentials: true, // 쿠키를 주고받을 수 있게됨
+      });
+      console.log(result.data.session_data);
+    };
+    fetchData();
+  }, [loginStatus]);
+
   const dispatch = useDispatch();
-  const [id, setId] = useState('');
-  const [password, setPassword] = useState('');
+
   const idInput = useRef();
   const pwInput = useRef();
+  const classes = useStyles();
 
   const loginSubmitForm = (e) => {
+    const { username, password } = login;
     e.preventDefault();
-    dispatch(thunkIncrementAsync(id, password));
+    dispatch({ type: DO_LOGIN, payload: { username, password } });
   };
-
   return (
     <div className="loginForm">
       <h1>SNSOL 로그인</h1>
@@ -69,13 +73,12 @@ const Login = (props) => {
             <CssTextField
               className={classes.margin}
               ref={idInput}
-              value={id}
               fullWidth
               variant="outlined"
               label="아이디를 입력하세요."
               size="medium"
               onChange={(e) => {
-                setId(e.target.value);
+                dispatch({ type: SET_USERNAME, payload: e.target.value });
               }}
             />
           </div>
@@ -83,7 +86,6 @@ const Login = (props) => {
             <CssTextField
               className={classes.width}
               ref={pwInput}
-              value={password}
               fullWidth
               variant="outlined"
               type="password"
@@ -91,7 +93,7 @@ const Login = (props) => {
               label="비밀번호를 입력하세요"
               size="medium"
               onChange={(e) => {
-                setPassword(e.target.value);
+                dispatch({ type: SET_PASSWORD, payload: e.target.value });
               }}
             />
           </div>
@@ -162,9 +164,5 @@ const Login = (props) => {
     </div>
   );
 };
-Login.getInitialProps = async (context) => {
-  // console.log(context);
-  const res = await axios.get('http://127.0.0.1:3001/auth/session_check');
-  // console.log(res);
-};
+
 export default Login;

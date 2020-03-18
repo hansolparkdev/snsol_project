@@ -1,21 +1,21 @@
 import React, { Fragment, useEffect } from 'react';
 import axios from 'axios';
+import Router from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from '../redux/reducers/counterReducer';
-import { sagaIncrement, sagaDecrement } from '../redux/reducers/sagaCounterReducer';
-import { thunkIncrementAsync, thunkDecrementAsync } from '../redux/reducers/thunkCounterReducer';
 
-const Index = () => {
-  const { value } = useSelector((state) => state.counter, []);
-  const { sagaValue } = useSelector((state) => state.sagaCounter, []);
-  const { thunkValue } = useSelector((state) => state.thunkCounter, []);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const result = await axios.get('http://127.0.0.1:3001/auth/session_check');
-  //     // setData(result.data);
-  //   };
-  //   fetchData();
-  // }, []);
+const Index = (props) => {
+  const login = useSelector((state) => state.sagaLogin, []);
+  const { loginStatus } = login;
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios('http://127.0.0.1:3001/auth/session_check', {
+        withCredentials: true, // 쿠키를 주고받을 수 있게됨
+      });
+      console.log(result.data.session_data);
+    };
+    fetchData();
+  }, [loginStatus]);
+
   const foo = () => {
     console.log('aaa');
   };
@@ -67,10 +67,11 @@ const Index = () => {
     </Fragment>
   );
 };
-Index.getInitialProps = async (context) => {
-  // console.log(context);
-  const res = await axios.get('http://127.0.0.1:3001/auth/session_check');
-  // console.log(res);
-};
+// Index.getInitialProps = (context) => {
+//   console.log(context.store.getState().loginStatus);
+//   if (context.store.getState().loginStatus === undefined) {
+//     Router.push('/login');
+//   }
+// };
 
 export default Index;
