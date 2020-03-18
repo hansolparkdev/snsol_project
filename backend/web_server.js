@@ -27,7 +27,7 @@ app.use(cors());
 app.use(
   session({
     secret: '!@#$%^&*',
-    resave: false,
+    resave: true,
     saveUninitialized: false,
   }),
 );

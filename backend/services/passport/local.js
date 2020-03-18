@@ -12,7 +12,6 @@ module.exports = () => {
         usernameField: 'uid',
         passwordField: 'upw',
       },
-      // id,password는 프론트에서 보낸것을받음
       async (id, password, done) => {
         if (id === undefined || password === undefined) {
           return done(null, false, {

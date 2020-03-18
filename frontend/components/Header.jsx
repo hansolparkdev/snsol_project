@@ -34,13 +34,18 @@ const Header = (props) => {
           <div className="menu">
             <ul>
               <li>
-                <Link href="/">
-                  <a>Index</a>
+                <Link href="/login">
+                  <a>main</a>
                 </Link>
               </li>
               <li>
-                <Link href="/login">
-                  <a>Login</a>
+                <Link href="/">
+                  <a>main</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  <a>main</a>
                 </Link>
               </li>
             </ul>

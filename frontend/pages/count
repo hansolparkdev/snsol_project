@@ -1,0 +1,43 @@
+  // const dispatch = useDispatch();
+  // const incrementBtn = () => {
+  //   dispatch(increment());
+  // };
+  // const decrementBtn = () => {
+  //   dispatch(decrement());
+  // };
+  // const sagaIncrementBtn = () => {
+  //   dispatch(sagaIncrement());
+  // };
+  // const sagaDecrementBtn = () => {
+  //   dispatch(sagaDecrement());
+  // };
+  // const thunkIncrementBtn = () => {
+  //   dispatch(thunkIncrementAsync());
+  // };
+  // const thunkDecrementBtn = () => {
+  //   dispatch(thunkDecrementAsync());
+  // };
+<div>
+  <div>
+    기본 리덕스
+    <div>{value}</div>
+    <button onClick={incrementBtn} type="button">증가</button>
+    <button onClick={decrementBtn} type="button">감소</button>
+  </div>
+</div>
+<div>
+  <div>
+    리덕스 사가
+    <div>{ sagaValue }</div>
+    <button onClick={sagaIncrementBtn} type="button">증가</button>
+    <button onClick={sagaDecrementBtn} type="button">감소</button>
+  </div>
+</div>
+<div>
+  <div>
+    리덕스 Thunk
+    <div>{ thunkValue }</div>
+    <button onClick={thunkIncrementBtn} type="button">증가</button>
+    <button onClick={thunkDecrementBtn} type="button">감소</button>
+  </div>
+</div>
