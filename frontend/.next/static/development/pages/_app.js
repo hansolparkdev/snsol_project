@@ -60392,7 +60392,7 @@ var sagaCounterReducer = function sagaCounterReducer() {
 /*!********************************************!*\
   !*** ./redux/reducers/sagaLoginReducer.js ***!
   \********************************************/
-/*! exports provided: SET_USERNAME_STARTED, SET_PASSWORD_STARTED, DO_LOGIN_STARTED, DO_LOGIN_SUCCESS, DO_LOGIN_FAIL, SESSION_CHECK_STARTED, SET_USERNAME, SET_PASSWORD, DO_LOGIN, SESSION_CHECK, initialState, default */
+/*! exports provided: SET_USERNAME_STARTED, SET_PASSWORD_STARTED, DO_LOGIN_STARTED, DO_LOGIN_SUCCESS, DO_LOGIN_FAIL, SESSION_CHECK_STARTED, SESSION_CHECK_HAVE, SESSION_CHECK_NONE, SET_USERNAME, SET_PASSWORD, DO_LOGIN, SESSION_CHECK, initialState, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60403,6 +60403,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN_SUCCESS", function() { return DO_LOGIN_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN_FAIL", function() { return DO_LOGIN_FAIL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK_STARTED", function() { return SESSION_CHECK_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK_HAVE", function() { return SESSION_CHECK_HAVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK_NONE", function() { return SESSION_CHECK_NONE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_USERNAME", function() { return SET_USERNAME; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_PASSWORD", function() { return SET_PASSWORD; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN", function() { return DO_LOGIN; });
@@ -60433,12 +60435,15 @@ function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_cor
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
 
+/* eslint-disable camelcase */
 var SET_USERNAME_STARTED = 'SET_USERNAME_STARTED';
 var SET_PASSWORD_STARTED = 'SET_PASSWORD_STARTED';
 var DO_LOGIN_STARTED = 'DO_LOGIN_STARTED';
 var DO_LOGIN_SUCCESS = 'DO_LOGIN_SUCCESS';
 var DO_LOGIN_FAIL = 'DO_LOGIN_FAIL';
-var SESSION_CHECK_STARTED = 'SESSION_CHECK_STARTED'; // SAGA Action
+var SESSION_CHECK_STARTED = 'SESSION_CHECK_STARTED';
+var SESSION_CHECK_HAVE = 'SESSION_CHECK_HAVE';
+var SESSION_CHECK_NONE = 'SESSION_CHECK_NONE'; // SAGA Action
 
 var SET_USERNAME = 'SET_USERNAME';
 var SET_PASSWORD = 'SET_PASSWORD';
@@ -60447,6 +60452,7 @@ var SESSION_CHECK = 'SESSION_CHECK';
 var initialState = {
   username: '',
   password: '',
+  name: '',
   loginStatus: undefined,
   loginErrorMsg: ''
 };
@@ -60480,12 +60486,36 @@ var sagaLoginReducer = function sagaLoginReducer() {
     case DO_LOGIN_SUCCESS:
       {
         return _objectSpread({}, state, {
-          loginStatus: 'success',
-          user: action.payload
+          loginStatus: 'success'
         });
       }
 
     case DO_LOGIN_FAIL:
+      {
+        return _objectSpread({}, state, {
+          loginStatus: 'failed'
+        });
+      }
+
+    case SESSION_CHECK_STARTED:
+      {
+        return _objectSpread({}, state);
+      }
+
+    case SESSION_CHECK_HAVE:
+      {
+        var _action$payload$sessi = action.payload.session_data.user,
+            user_id = _action$payload$sessi.user_id,
+            name = _action$payload$sessi.name;
+        var username = user_id;
+        return _objectSpread({}, state, {
+          username: username,
+          name: name,
+          loginStatus: 'success'
+        });
+      }
+
+    case SESSION_CHECK_NONE:
       {
         return _objectSpread({}, state, {
           loginStatus: 'failed'
@@ -60606,7 +60636,7 @@ var thunkCounterReducer = function thunkCounterReducer() {
 /*!******************************!*\
   !*** ./redux/sagas/login.js ***!
   \******************************/
-/*! exports provided: watchSetUsername, watchSetUserpassword, watchLogin */
+/*! exports provided: watchSetUsername, watchSetUserpassword, watchLogin, watchSession */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60614,6 +60644,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSetUsername", function() { return watchSetUsername; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSetUserpassword", function() { return watchSetUserpassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchLogin", function() { return watchLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSession", function() { return watchSession; });
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
@@ -60714,53 +60745,130 @@ var doLogin = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_
       }
     }
   }, doLogin, null, [[0, 12]]);
-}); // watch
+});
 
+var sessionCheck = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function sessionCheck() {
+  var _ref2, data;
 
-var watchSetUsername = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchSetUsername() {
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchSetUsername$(_context4) {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function sessionCheck$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
-          _context4.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SET_USERNAME"], setUsername);
+          _context4.prev = 0;
+          _context4.next = 3;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SESSION_CHECK_STARTED"]
+          });
 
-        case 2:
+        case 3:
+          _context4.next = 5;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])([axios__WEBPACK_IMPORTED_MODULE_2___default.a, 'get'], 'http://127.0.0.1:3001/auth/session_check', {
+            withCredentials: true
+          });
+
+        case 5:
+          _ref2 = _context4.sent;
+          data = _ref2.data;
+
+          if (!(data.session_data.user === '')) {
+            _context4.next = 12;
+            break;
+          }
+
+          _context4.next = 10;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SESSION_CHECK_NONE"]
+          });
+
+        case 10:
+          _context4.next = 14;
+          break;
+
+        case 12:
+          _context4.next = 14;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SESSION_CHECK_HAVE"],
+            payload: data
+          });
+
+        case 14:
+          _context4.next = 20;
+          break;
+
+        case 16:
+          _context4.prev = 16;
+          _context4.t0 = _context4["catch"](0);
+          _context4.next = 20;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({});
+
+        case 20:
         case "end":
           return _context4.stop();
       }
     }
-  }, watchSetUsername);
-});
-var watchSetUserpassword = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchSetUserpassword() {
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchSetUserpassword$(_context5) {
+  }, sessionCheck, null, [[0, 16]]);
+}); // watch
+
+
+var watchSetUsername = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchSetUsername() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchSetUsername$(_context5) {
     while (1) {
       switch (_context5.prev = _context5.next) {
         case 0:
           _context5.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SET_PASSWORD"], setPassword);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SET_USERNAME"], setUsername);
 
         case 2:
         case "end":
           return _context5.stop();
       }
     }
-  }, watchSetUserpassword);
+  }, watchSetUsername);
 });
-var watchLogin = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchLogin() {
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchLogin$(_context6) {
+var watchSetUserpassword = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchSetUserpassword() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchSetUserpassword$(_context6) {
     while (1) {
       switch (_context6.prev = _context6.next) {
         case 0:
           _context6.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["DO_LOGIN"], doLogin);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SET_PASSWORD"], setPassword);
 
         case 2:
         case "end":
           return _context6.stop();
       }
     }
+  }, watchSetUserpassword);
+});
+var watchLogin = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchLogin() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchLogin$(_context7) {
+    while (1) {
+      switch (_context7.prev = _context7.next) {
+        case 0:
+          _context7.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["DO_LOGIN"], doLogin);
+
+        case 2:
+        case "end":
+          return _context7.stop();
+      }
+    }
   }, watchLogin);
+});
+var watchSession = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function wathchSession() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function wathchSession$(_context8) {
+    while (1) {
+      switch (_context8.prev = _context8.next) {
+        case 0:
+          _context8.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_3__["SESSION_CHECK"], sessionCheck);
+
+        case 2:
+        case "end":
+          return _context8.stop();
+      }
+    }
+  }, wathchSession);
 });
 
 /***/ }),
@@ -60792,7 +60900,7 @@ function rootSaga() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchLogin"])()]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSession"])()]);
 
         case 2:
         case "end":

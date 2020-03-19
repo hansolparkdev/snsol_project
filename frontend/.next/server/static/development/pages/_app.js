@@ -2258,7 +2258,7 @@ const sagaCounterReducer = (state = initialState, action) => {
 /*!********************************************!*\
   !*** ./redux/reducers/sagaLoginReducer.js ***!
   \********************************************/
-/*! exports provided: SET_USERNAME_STARTED, SET_PASSWORD_STARTED, DO_LOGIN_STARTED, DO_LOGIN_SUCCESS, DO_LOGIN_FAIL, SESSION_CHECK_STARTED, SET_USERNAME, SET_PASSWORD, DO_LOGIN, SESSION_CHECK, initialState, default */
+/*! exports provided: SET_USERNAME_STARTED, SET_PASSWORD_STARTED, DO_LOGIN_STARTED, DO_LOGIN_SUCCESS, DO_LOGIN_FAIL, SESSION_CHECK_STARTED, SESSION_CHECK_HAVE, SESSION_CHECK_NONE, SET_USERNAME, SET_PASSWORD, DO_LOGIN, SESSION_CHECK, initialState, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2269,6 +2269,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN_SUCCESS", function() { return DO_LOGIN_SUCCESS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN_FAIL", function() { return DO_LOGIN_FAIL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK_STARTED", function() { return SESSION_CHECK_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK_HAVE", function() { return SESSION_CHECK_HAVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SESSION_CHECK_NONE", function() { return SESSION_CHECK_NONE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_USERNAME", function() { return SET_USERNAME; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_PASSWORD", function() { return SET_PASSWORD; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DO_LOGIN", function() { return DO_LOGIN; });
@@ -2280,12 +2282,15 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/* eslint-disable camelcase */
 const SET_USERNAME_STARTED = 'SET_USERNAME_STARTED';
 const SET_PASSWORD_STARTED = 'SET_PASSWORD_STARTED';
 const DO_LOGIN_STARTED = 'DO_LOGIN_STARTED';
 const DO_LOGIN_SUCCESS = 'DO_LOGIN_SUCCESS';
 const DO_LOGIN_FAIL = 'DO_LOGIN_FAIL';
-const SESSION_CHECK_STARTED = 'SESSION_CHECK_STARTED'; // SAGA Action
+const SESSION_CHECK_STARTED = 'SESSION_CHECK_STARTED';
+const SESSION_CHECK_HAVE = 'SESSION_CHECK_HAVE';
+const SESSION_CHECK_NONE = 'SESSION_CHECK_NONE'; // SAGA Action
 
 const SET_USERNAME = 'SET_USERNAME';
 const SET_PASSWORD = 'SET_PASSWORD';
@@ -2294,6 +2299,7 @@ const SESSION_CHECK = 'SESSION_CHECK';
 const initialState = {
   username: '',
   password: '',
+  name: '',
   loginStatus: undefined,
   loginErrorMsg: ''
 };
@@ -2324,12 +2330,37 @@ const sagaLoginReducer = (state = initialState, action) => {
     case DO_LOGIN_SUCCESS:
       {
         return _objectSpread({}, state, {
-          loginStatus: 'success',
-          user: action.payload
+          loginStatus: 'success'
         });
       }
 
     case DO_LOGIN_FAIL:
+      {
+        return _objectSpread({}, state, {
+          loginStatus: 'failed'
+        });
+      }
+
+    case SESSION_CHECK_STARTED:
+      {
+        return _objectSpread({}, state);
+      }
+
+    case SESSION_CHECK_HAVE:
+      {
+        const {
+          user_id,
+          name
+        } = action.payload.session_data.user;
+        const username = user_id;
+        return _objectSpread({}, state, {
+          username,
+          name,
+          loginStatus: 'success'
+        });
+      }
+
+    case SESSION_CHECK_NONE:
       {
         return _objectSpread({}, state, {
           loginStatus: 'failed'
@@ -2420,7 +2451,7 @@ const thunkCounterReducer = (state = initialState, action) => {
 /*!******************************!*\
   !*** ./redux/sagas/login.js ***!
   \******************************/
-/*! exports provided: watchSetUsername, watchSetUserpassword, watchLogin */
+/*! exports provided: watchSetUsername, watchSetUserpassword, watchLogin, watchSession */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2428,6 +2459,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSetUsername", function() { return watchSetUsername; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSetUserpassword", function() { return watchSetUserpassword; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchLogin", function() { return watchLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchSession", function() { return watchSession; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
@@ -2476,6 +2508,33 @@ const doLogin = function* doLogin(action) {
       type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN_FAIL"]
     });
   }
+};
+
+const sessionCheck = function* sessionCheck() {
+  try {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SESSION_CHECK_STARTED"]
+    });
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])([axios__WEBPACK_IMPORTED_MODULE_1___default.a, 'get'], 'http://127.0.0.1:3001/auth/session_check', {
+      withCredentials: true
+    }); // console.log(data.session_data.user);
+
+    if (data.session_data.user === '') {
+      yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+        type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SESSION_CHECK_NONE"]
+      });
+    } else {
+      yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+        type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SESSION_CHECK_HAVE"],
+        payload: data
+      });
+    } // console.log(data);
+
+  } catch (e) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({});
+  }
 }; // watch
 
 
@@ -2487,6 +2546,9 @@ const watchSetUserpassword = function* watchSetUserpassword() {
 };
 const watchLogin = function* watchLogin() {
   yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN"], doLogin);
+};
+const watchSession = function* wathchSession() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["SESSION_CHECK"], sessionCheck);
 };
 
 /***/ }),
@@ -2508,7 +2570,7 @@ __webpack_require__.r(__webpack_exports__);
  // all 함수를 통해 Saga들을 하나로 묶어줄수 있다.
 
 function* rootSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchLogin"])()]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSession"])()]);
 }
 
 /***/ }),

@@ -1,9 +1,13 @@
 /*  */
 module.exports = (sequelize, DataTypes) => sequelize.define('card', {
+  board_id: {
+    type: DataTypes.INTEGER,
+    allowNULL: false,
+    unique: true,
+  },
   title: {
     type: DataTypes.STRING(50), // VARCHAR
     allowNULL: false,
-    unique: true,
   },
   desc: {
     type: DataTypes.TEXT,

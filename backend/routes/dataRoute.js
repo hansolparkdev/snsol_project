@@ -13,4 +13,12 @@ router.get('/user', (req, res) => {
     });
 });
 
+router.get('/follow', async (req, res) => {
+  const user = await models.Follow.count({
+    where: { followingId: 'user1' },
+    // attributes: ['followerId'],
+  });
+  console.log(user);
+});
+
 module.exports = router;

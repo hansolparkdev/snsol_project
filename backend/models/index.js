@@ -13,10 +13,29 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 db.User = require('./user')(sequelize, Sequelize);
-db.card = require('./card')(sequelize, Sequelize);
+db.Card = require('./card')(sequelize, Sequelize);
+db.Follow = require('./follow')(sequelize, Sequelize);
 
-db.User.hasMany(db.card, { foreignKey: 'uid', sourceKey: 'user_id' });
-db.card.belongsTo(db.User, { foreignKey: 'uid', targetKey: 'user_id' });
+// 게시물 연결
+db.User.hasMany(db.Card, { foreignKey: 'user_id', sourceKey: 'user_id' });
+db.Card.belongsTo(db.User, { foreignKey: 'user_id', targetKey: 'user_id' });
+
+// 팔로우 연결
+db.User.belongsToMany(db.User, {
+  foreignKey: 'followingId',
+  sourceKey: 'user_id',
+  as: 'Followers',
+  through: db.Follow,
+});
+db.User.belongsToMany(db.User, {
+  foreignKey: 'followerId',
+  sourceKey: 'user_id',
+  as: 'Followings',
+  through: db.Follow,
+});
+
+
+// like 연결
 // db.User = require('./user')(sequelize, Sequelize)
 
 module.exports = db;

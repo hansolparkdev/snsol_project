@@ -9,7 +9,10 @@ import { TextField } from '@material-ui/core';
 import { withStyles, makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
-import { SET_USERNAME, SET_PASSWORD, DO_LOGIN } from '../redux/reducers/sagaLoginReducer';
+import {
+  SET_USERNAME, SET_PASSWORD,
+  DO_LOGIN, SESSION_CHECK,
+} from '../redux/reducers/sagaLoginReducer';
 
 const CssTextField = withStyles({
   root: {
@@ -42,18 +45,18 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = (props) => {
   const login = useSelector((state) => state.sagaLogin, []);
+  const dispatch = useDispatch();
   const { loginStatus } = login;
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios('http://127.0.0.1:3001/auth/session_check', {
-        withCredentials: true, // 쿠키를 주고받을 수 있게됨
-      });
-      console.log(result.data.session_data);
+    const fetchData = () => {
+      dispatch({ type: SESSION_CHECK });
+      console.log(loginStatus);
+      if (loginStatus === 'success') {
+        Router.push('/');
+      }
     };
     fetchData();
   }, [loginStatus]);
-
-  const dispatch = useDispatch();
 
   const idInput = useRef();
   const pwInput = useRef();
@@ -66,59 +69,63 @@ const Login = (props) => {
   };
   return (
     <div className="loginForm">
-      <h1>SNSOL 로그인</h1>
-      <form onSubmit={loginSubmitForm} className={classes.root} noValidate>
-        <div className="textInputForm">
-          <div className="inputForm">
-            <CssTextField
-              className={classes.margin}
-              ref={idInput}
-              fullWidth
-              variant="outlined"
-              label="아이디를 입력하세요."
-              size="medium"
-              onChange={(e) => {
-                dispatch({ type: SET_USERNAME, payload: e.target.value });
-              }}
-            />
-          </div>
-          <div className="inputForm">
-            <CssTextField
-              className={classes.width}
-              ref={pwInput}
-              fullWidth
-              variant="outlined"
-              type="password"
-              autoComplete="on"
-              label="비밀번호를 입력하세요"
-              size="medium"
-              onChange={(e) => {
-                dispatch({ type: SET_PASSWORD, payload: e.target.value });
-              }}
-            />
-          </div>
-        </div>
-        <Button size="lg" block type="submit">로그인</Button>
-        <Button size="lg" variant="warning" block type="button">KaKao 로그인</Button>
-      </form>
-      <div className="login_etc">
+      {loginStatus === 'failed' ? (
         <div>
-          <Link href="/">
-            <a>회원가입</a>
-          </Link>
+          <h1>SNSOL 로그인</h1>
+          <form onSubmit={loginSubmitForm} className={classes.root} noValidate>
+            <div className="textInputForm">
+              <div className="inputForm">
+                <CssTextField
+                  className={classes.margin}
+                  ref={idInput}
+                  fullWidth
+                  variant="outlined"
+                  label="아이디를 입력하세요."
+                  size="medium"
+                  onChange={(e) => {
+                    dispatch({ type: SET_USERNAME, payload: e.target.value });
+                  }}
+                />
+              </div>
+              <div className="inputForm">
+                <CssTextField
+                  className={classes.width}
+                  ref={pwInput}
+                  fullWidth
+                  variant="outlined"
+                  type="password"
+                  autoComplete="on"
+                  label="비밀번호를 입력하세요"
+                  size="medium"
+                  onChange={(e) => {
+                    dispatch({ type: SET_PASSWORD, payload: e.target.value });
+                  }}
+                />
+              </div>
+            </div>
+            <Button size="lg" block type="submit">로그인</Button>
+            <Button size="lg" variant="warning" block type="button">KaKao 로그인</Button>
+          </form>
+          <div className="login_etc">
+            <div>
+              <Link href="/">
+                <a>회원가입</a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/">
+                <a>아이디 찾기</a>
+              </Link>
+              &nbsp;
+              &
+              &nbsp;
+              <Link href="/">
+                <a>비밀번호 찾기</a>
+              </Link>
+            </div>
+          </div>
         </div>
-        <div>
-          <Link href="/">
-            <a>아이디 찾기</a>
-          </Link>
-          &nbsp;
-          &
-          &nbsp;
-          <Link href="/">
-            <a>비밀번호 찾기</a>
-          </Link>
-        </div>
-      </div>
+      ) : <div />}
       <style jsx>
         {`
           .loginForm {

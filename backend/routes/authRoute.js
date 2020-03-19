@@ -42,12 +42,13 @@ router.post('/signin', [jsonParser], (req, res, next) => {
   })(req, res, next);
 });
 router.get('/session_check', (req, res) => {
+  // console.log(req.user);
   if (req.user === undefined) {
     const user = { user: '' };
     res.json({ session_data: user });
     return;
   }
-  res.json({ session_data: req.user });
+  res.json({ session_data: { user: req.user } });
 });
 
 
