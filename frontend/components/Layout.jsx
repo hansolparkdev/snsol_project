@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, memo } from 'react';
 import head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = (props) => {
+const Layout = memo((props) => {
   const { children } = props;
   return (
     <Fragment>
@@ -25,6 +25,6 @@ const Layout = (props) => {
       </style>
     </Fragment>
   );
-};
+});
 
 export default Layout;

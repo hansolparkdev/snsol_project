@@ -1,7 +1,10 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, {
+  Fragment, useState, useEffect,
+  memo,
+} from 'react';
 import Profile from '../profile/Profile';
 
-const Main = (props) => {
+const Main = memo((props) => {
   const foo = () => {
     console.log('aaa');
   };
@@ -43,6 +46,6 @@ const Main = (props) => {
       </style>
     </Fragment>
   );
-};
+});
 
 export default Main;

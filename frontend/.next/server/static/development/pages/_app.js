@@ -291,8 +291,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
-const Layout = props => {
+const Layout = Object(react__WEBPACK_IMPORTED_MODULE_1__["memo"])(props => {
   const {
     children
   } = props;
@@ -305,9 +304,8 @@ const Layout = props => {
     className: "jsx-1192734587" + " " + "container"
   }, children)), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null)), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "1192734587"
-  }, ".content.jsx-1192734587{background-color:#fafafa;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcTGF5b3V0LmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFtQlMsQUFHcUMseUJBQzFCIiwiZmlsZSI6IkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcTGF5b3V0LmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBGcmFnbWVudCB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IGhlYWQgZnJvbSAnbmV4dC9oZWFkJztcclxuaW1wb3J0IEhlYWRlciBmcm9tICcuL0hlYWRlcic7XHJcbmltcG9ydCBGb290ZXIgZnJvbSAnLi9Gb290ZXInO1xyXG5cclxuY29uc3QgTGF5b3V0ID0gKHByb3BzKSA9PiB7XHJcbiAgY29uc3QgeyBjaGlsZHJlbiB9ID0gcHJvcHM7XHJcbiAgcmV0dXJuIChcclxuICAgIDxGcmFnbWVudD5cclxuICAgICAgPGRpdiBpZD1cIndyYXBcIj5cclxuICAgICAgICA8SGVhZGVyIC8+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250ZW50XCI+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxyXG4gICAgICAgICAgICB7IGNoaWxkcmVuIH1cclxuICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDxGb290ZXIgLz5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxzdHlsZSBqc3g+XHJcbiAgICAgICAge2BcclxuICAgICAgICAgIC5jb250ZW50IHtcclxuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjojZmFmYWZhO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgIGB9XHJcbiAgICAgIDwvc3R5bGU+XHJcbiAgICA8L0ZyYWdtZW50PlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBMYXlvdXQ7XHJcbiJdfQ== */\n/*@ sourceURL=D:\\\\Desktop\\\\snsol_project\\\\frontend\\\\components\\\\Layout.jsx */"));
-};
-
+  }, ".content.jsx-1192734587{background-color:#fafafa;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcTGF5b3V0LmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFtQlMsQUFHcUMseUJBQzFCIiwiZmlsZSI6IkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcTGF5b3V0LmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBGcmFnbWVudCwgbWVtbyB9IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IGhlYWQgZnJvbSAnbmV4dC9oZWFkJztcclxuaW1wb3J0IEhlYWRlciBmcm9tICcuL0hlYWRlcic7XHJcbmltcG9ydCBGb290ZXIgZnJvbSAnLi9Gb290ZXInO1xyXG5cclxuY29uc3QgTGF5b3V0ID0gbWVtbygocHJvcHMpID0+IHtcclxuICBjb25zdCB7IGNoaWxkcmVuIH0gPSBwcm9wcztcclxuICByZXR1cm4gKFxyXG4gICAgPEZyYWdtZW50PlxyXG4gICAgICA8ZGl2IGlkPVwid3JhcFwiPlxyXG4gICAgICAgIDxIZWFkZXIgLz5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRlbnRcIj5cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XHJcbiAgICAgICAgICAgIHsgY2hpbGRyZW4gfVxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPEZvb3RlciAvPlxyXG4gICAgICA8L2Rpdj5cclxuICAgICAgPHN0eWxlIGpzeD5cclxuICAgICAgICB7YFxyXG4gICAgICAgICAgLmNvbnRlbnQge1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiNmYWZhZmE7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgYH1cclxuICAgICAgPC9zdHlsZT5cclxuICAgIDwvRnJhZ21lbnQ+XHJcbiAgKTtcclxufSk7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBMYXlvdXQ7XHJcbiJdfQ== */\n/*@ sourceURL=D:\\\\Desktop\\\\snsol_project\\\\frontend\\\\components\\\\Layout.jsx */"));
+});
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
 
 /***/ }),
@@ -2161,6 +2159,63 @@ const counterReducer = (state = initialState, action) => {
 
 /***/ }),
 
+/***/ "./redux/reducers/followReducer.js":
+/*!*****************************************!*\
+  !*** ./redux/reducers/followReducer.js ***!
+  \*****************************************/
+/*! exports provided: FETCH_FOLLOW_COUNT_VALUE_STATED, FETCH_FOLLOW_COUNT_VALUE, initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_FOLLOW_COUNT_VALUE_STATED", function() { return FETCH_FOLLOW_COUNT_VALUE_STATED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_FOLLOW_COUNT_VALUE", function() { return FETCH_FOLLOW_COUNT_VALUE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+// 액션 선언
+const FETCH_FOLLOW_COUNT_VALUE_STATED = 'FETCH_FOLLOW_COUNT_VALUE_STATED'; // export const FETCH_FOLLOW_COUNT_VALUE_SUCCESS = 'FETCH_FOLLOW_COUNT_VALUE_STATED';
+// export const FETCH_FOLLOW_COUNT_VALUE_FAIL = 'FETCH_FOLLOW_COUNT_VALUE_STATED';
+// 사가 액션 선언
+
+const FETCH_FOLLOW_COUNT_VALUE = 'FETCH_FOLLOW_COUNT_VALUE'; // 초기 값
+
+const initialState = {
+  following: 0,
+  follower: 0,
+  followingList: [],
+  followerList: []
+}; // 액션
+
+const followReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_FOLLOW_COUNT_VALUE_STATED:
+      {
+        const {
+          following,
+          follower
+        } = action.payload;
+        return _objectSpread({}, state, {
+          following,
+          follower
+        });
+      }
+
+    default:
+      {
+        return _objectSpread({}, state);
+      }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (followReducer);
+
+/***/ }),
+
 /***/ "./redux/reducers/rootReducer.js":
 /*!***************************************!*\
   !*** ./redux/reducers/rootReducer.js ***!
@@ -2175,19 +2230,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _counterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./counterReducer */ "./redux/reducers/counterReducer.js");
 /* harmony import */ var _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sagaCounterReducer */ "./redux/reducers/sagaCounterReducer.js");
 /* harmony import */ var _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./thunkCounterReducer */ "./redux/reducers/thunkCounterReducer.js");
-/* harmony import */ var _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sagaLoginReducer */ "./redux/reducers/sagaLoginReducer.js");
+/* harmony import */ var _followReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./followReducer */ "./redux/reducers/followReducer.js");
+/* harmony import */ var _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sagaLoginReducer */ "./redux/reducers/sagaLoginReducer.js");
 
 
 
- // import loginReducer from './loginReducer';
+
 
 
 const rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   counter: _counterReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   sagaCounter: _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   thunkCounter: _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  // login: loginReducer,
-  sagaLogin: _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  follow: _followReducer__WEBPACK_IMPORTED_MODULE_4__["default"],
+  sagaLogin: _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -2337,7 +2393,9 @@ const sagaLoginReducer = (state = initialState, action) => {
     case DO_LOGIN_FAIL:
       {
         return _objectSpread({}, state, {
-          loginStatus: 'failed'
+          username: '',
+          password: '',
+          loginStatus: 'login_failed'
         });
       }
 
@@ -2447,6 +2505,48 @@ const thunkCounterReducer = (state = initialState, action) => {
 
 /***/ }),
 
+/***/ "./redux/sagas/follow.js":
+/*!*******************************!*\
+  !*** ./redux/sagas/follow.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _reducers_followReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/followReducer */ "./redux/reducers/followReducer.js");
+
+
+ // import { SAGA_SIGN_IN } from '../reducers/sagaLoginReducer';
+
+const fetchFollowing = function* fetchFollowing(action) {
+  try {
+    console.log(action.payload);
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])([axios__WEBPACK_IMPORTED_MODULE_1___default.a, 'get'], `http://127.0.0.1:3001/follow?userId=${action.payload}`, {
+      withCredentials: true
+    });
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_followReducer__WEBPACK_IMPORTED_MODULE_2__["FETCH_FOLLOW_COUNT_VALUE_STATED"],
+      payload: data
+    });
+  } catch (e) {// yield put();
+  }
+};
+
+const watchFollow = function* watchFollow() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_followReducer__WEBPACK_IMPORTED_MODULE_2__["FETCH_FOLLOW_COUNT_VALUE"], fetchFollowing);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (watchFollow);
+
+/***/ }),
+
 /***/ "./redux/sagas/login.js":
 /*!******************************!*\
   !*** ./redux/sagas/login.js ***!
@@ -2504,6 +2604,7 @@ const doLogin = function* doLogin(action) {
       type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN_SUCCESS"]
     });
   } catch (e) {
+    alert(e.response.data);
     yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
       type: _reducers_sagaLoginReducer__WEBPACK_IMPORTED_MODULE_2__["DO_LOGIN_FAIL"]
     });
@@ -2566,11 +2667,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./login */ "./redux/sagas/login.js");
+/* harmony import */ var _follow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./follow */ "./redux/sagas/follow.js");
+
 
  // all 함수를 통해 Saga들을 하나로 묶어줄수 있다.
 
 function* rootSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSession"])()]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSession"])(), Object(_follow__WEBPACK_IMPORTED_MODULE_2__["default"])()]);
 }
 
 /***/ }),

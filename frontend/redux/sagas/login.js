@@ -28,6 +28,7 @@ const doLogin = function* doLogin(action) {
     });
     yield put({ type: DO_LOGIN_SUCCESS });
   } catch (e) {
+    alert(e.response.data);
     yield put({ type: DO_LOGIN_FAIL });
   }
 };

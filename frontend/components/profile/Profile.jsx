@@ -2,23 +2,29 @@ import React, {
   Fragment, useState, useEffect, memo,
 } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { SESSION_CHECK } from '../../redux/reducers/sagaLoginReducer';
+import { FETCH_FOLLOW_COUNT_VALUE } from '../../redux/reducers/followReducer';
 
 const Profile = memo(() => {
   const login = useSelector((state) => state.sagaLogin, []);
+  const { following, follower } = useSelector((state) => state.follow, []);
   const dispatch = useDispatch();
-  const [name, setName] = useState('');
-  const [followingId, setFollowingId] = useState(0);
-  const [followerId, setFollowerId] = useState(0);
-  // useEffect(() => {
-  //   dispatch({ type: SESSION_CHECK });
-  // }, []);
-  // console.log(login);
+  useEffect(() => {
+    // console.log(follow)
+    const fetchData = async () => {
+      dispatch({ type: FETCH_FOLLOW_COUNT_VALUE, payload: login.username });
+    };
+    console.log(following);
+    console.log(follower);
+    fetchData();
+  }, [following, follower]);
+
   return (
     <Fragment>
       <div className="right_content card">
         <p>팔로우</p>
+        <p>{following}</p>
         <p>팔로잉</p>
+        <p>{follower}</p>
       </div>
       <style jsx>
         {`

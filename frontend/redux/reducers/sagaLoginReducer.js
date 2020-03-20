@@ -37,7 +37,12 @@ const sagaLoginReducer = (state = initialState, action) => {
       return { ...state, loginStatus: 'success' };
     }
     case DO_LOGIN_FAIL: {
-      return { ...state, loginStatus: 'failed' };
+      return {
+        ...state,
+        username: '',
+        password: '',
+        loginStatus: 'login_failed',
+      };
     }
     case SESSION_CHECK_STARTED: {
       return { ...state };

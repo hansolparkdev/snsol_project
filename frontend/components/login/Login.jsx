@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import Router from 'next/router';
@@ -41,16 +41,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = (props) => {
+const Login = memo((props) => {
   const login = useSelector((state) => state.sagaLogin, []);
+  const { username, password } = login;
   const dispatch = useDispatch();
 
   const idInput = useRef();
   const pwInput = useRef();
   const classes = useStyles();
-
+  useEffect(() => {
+    const data = () => {
+      if (login.loginStatus === 'login_failed') {
+        idInput.current.value = '';
+        pwInput.current.value = '';
+        idInput.current.focus();
+      }
+    };
+    data();
+  }, [login]);
   const loginSubmitForm = (e) => {
-    const { username, password } = login;
     e.preventDefault();
     dispatch({ type: DO_LOGIN, payload: { username, password } });
   };
@@ -63,7 +72,7 @@ const Login = (props) => {
             <div className="inputForm">
               <CssTextField
                 className={classes.margin}
-                ref={idInput}
+                inputRef={idInput}
                 fullWidth
                 variant="outlined"
                 label="아이디를 입력하세요."
@@ -76,7 +85,7 @@ const Login = (props) => {
             <div className="inputForm">
               <CssTextField
                 className={classes.width}
-                ref={pwInput}
+                inputRef={pwInput}
                 fullWidth
                 variant="outlined"
                 type="password"
@@ -155,6 +164,6 @@ const Login = (props) => {
       </style>
     </div>
   );
-};
+});
 
 export default Login;
