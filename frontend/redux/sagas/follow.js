@@ -7,7 +7,6 @@ import {
 
 const fetchFollowing = function* fetchFollowing(action) {
   try {
-    console.log(action.payload);
     const { data } = yield call([axios, 'get'], `http://127.0.0.1:3001/follow?userId=${action.payload}`, {
       withCredentials: true,
     });

@@ -18,19 +18,6 @@ const Header = (props) => {
               <span>DS</span>
             </Link>
           </div>
-          <div className="search">
-            <InputGroup className="mb-3" id="header_search_input">
-              <FormControl
-                placeholder="Username"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-                id="hello"
-              />
-              <Button onClick={onClick}>
-                <i className="fa fa-search" aria-hidden="false" />
-              </Button>
-            </InputGroup>
-          </div>
           <div className="menu">
             <ul>
               <li>

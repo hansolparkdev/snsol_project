@@ -13,26 +13,65 @@ const Profile = memo(() => {
     const fetchData = async () => {
       dispatch({ type: FETCH_FOLLOW_COUNT_VALUE, payload: login.username });
     };
-    console.log(following);
-    console.log(follower);
     fetchData();
   }, [following, follower]);
 
   return (
     <Fragment>
-      <div className="right_content card">
-        <p>팔로우</p>
-        <p>{following}</p>
-        <p>팔로잉</p>
-        <p>{follower}</p>
+      <div className="right_content">
+        <div className="p_top">
+          <p className="p_name">
+            {`${login.name} (${login.username})`}
+          </p>
+          <button type="button">LogOut</button>
+        </div>
+        <div className="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Follower</th>
+                <th>Following</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{follower}</td>
+                <td>{following}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
       <style jsx>
         {`
           .right_content{
             float:left;
             width:30%;
-            height:500px;
-            background-color:white;
+          }
+          .p_top{
+            overflow:hidden;
+            padding:0 0 10px 0;
+            height:50px;
+          }
+          .p_top p{
+            float:left;
+            line-height:50px;
+          }
+          .p_top button{
+            float:right;
+            width:30%;
+            height:30px;
+            margin-top:10px;
+          }
+          .p_name{
+            font-size:15px;
+          }
+          table{
+            text-align:center;
+            margin:10px 0;
+          }
+          table th, table td{
+            height:30px;
           }
         `}
       </style>

@@ -52,8 +52,6 @@ const Login = memo((props) => {
   useEffect(() => {
     const data = () => {
       if (login.loginStatus === 'login_failed') {
-        idInput.current.value = '';
-        pwInput.current.value = '';
         idInput.current.focus();
       }
     };
@@ -74,6 +72,7 @@ const Login = memo((props) => {
                 className={classes.margin}
                 inputRef={idInput}
                 fullWidth
+                value={username}
                 variant="outlined"
                 label="아이디를 입력하세요."
                 size="medium"
@@ -89,6 +88,7 @@ const Login = memo((props) => {
                 fullWidth
                 variant="outlined"
                 type="password"
+                value={password}
                 autoComplete="on"
                 label="비밀번호를 입력하세요"
                 size="medium"

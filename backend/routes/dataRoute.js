@@ -1,10 +1,13 @@
 const express = require('express');
-const models = require('../models');
+const {
+  User, Follow,
+  Card, Sequelize: { Op },
+} = require('../models');
 
 const router = express.Router();
 
 router.get('/user', (req, res) => {
-  models.User.findAll()
+  User.findAll()
     .then((result) => {
       res.send(result);
     })
@@ -15,17 +18,39 @@ router.get('/user', (req, res) => {
 
 router.get('/follow', async (req, res) => {
   const { userId } = req.query;
-  const following = await models.Follow.count({
+  const follower = await Follow.count({
     where: { followingId: userId },
     // attributes: ['followerId'],
   });
-  const follower = await models.Follow.count({
+  const following = await Follow.count({
     where: { followerId: userId },
     // attributes: ['followerId'],
   });
   // console.log(follower);
   // console.log(following);
-  res.send({ following, follower });
+  res.send({ follower, following });
+});
+
+router.get('/cards', async (req, res) => {
+  const { userId } = req.query;
+  const result = await Card.findAll({
+    attributes: ['title', 'desc', 'user_id'],
+    where: {
+      [Op.or]: [
+        { '$follow.followingId$': userId },
+        { user_id: userId },
+      ],
+    },
+    include: [{
+      model: Follow,
+      as: 'follow',
+    }],
+    order: [
+      ['createdAt', 'desc'],
+    ],
+  });
+  console.log(result);
+  res.send(result);
 });
 
 module.exports = router;

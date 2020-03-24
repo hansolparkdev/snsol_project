@@ -131,21 +131,6 @@ var Header = function Header(props) {
   }, __jsx("span", {
     className: "jsx-3167871876"
   }, "DS"))), __jsx("div", {
-    className: "jsx-3167871876" + " " + "search"
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["InputGroup"], {
-    className: "mb-3",
-    id: "header_search_input"
-  }, __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["FormControl"], {
-    placeholder: "Username",
-    "aria-label": "Username",
-    "aria-describedby": "basic-addon1",
-    id: "hello"
-  }), __jsx(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["Button"], {
-    onClick: onClick
-  }, __jsx("i", {
-    "aria-hidden": "false",
-    className: "jsx-3167871876" + " " + "fa fa-search"
-  })))), __jsx("div", {
     className: "jsx-3167871876" + " " + "menu"
   }, __jsx("ul", {
     className: "jsx-3167871876"
@@ -169,7 +154,7 @@ var Header = function Header(props) {
     className: "jsx-3167871876"
   }, "main"))))))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "3167871876"
-  }, "#header.jsx-3167871876{border-bottom:1px solid #ced4da;}.container.jsx-3167871876{overflow:hidden;}.logo.jsx-3167871876{float:left;width:120px;color:white;margin-right:50px;}.logo.jsx-3167871876 span.jsx-3167871876{line-height:55px;background-color:black;padding:10px;font-size:20px;font-weight:700;cursor:pointer;}.search.jsx-3167871876{position:relative;top:8px;float:left;width:400px;margin-right:50px;}.menu.jsx-3167871876{float:right;}.menu.jsx-3167871876 ul.jsx-3167871876{line-height:55px;}.menu.jsx-3167871876 li.jsx-3167871876{display:inline;margin-left:50px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcSGVhZGVyLmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF1RFMsQUFHNEMsQUFHaEIsQUFHTCxBQU1NLEFBUUMsQUFPTixBQUVZLEFBQ0QsV0F2QlgsQ0FxQmIsR0FFeUMsQ0ExQnpDLENBU3dCLEFBZ0JFLENBUmpCLEtBYkksR0FjRCxNQXJCWixBQTZCMEMsR0FyQnZCLEVBY04sR0FUQyxTQVVLLElBZG5CLEFBS2dCLGNBVWhCLENBVGlCLGdCQUNELGVBQ2hCIiwiZmlsZSI6IkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcSGVhZGVyLmpzeCIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG5vLWFsZXJ0ICovXHJcbi8qIGVzbGludC1kaXNhYmxlIGpzeC1hMTF5L2FuY2hvci1pcy12YWxpZCAqL1xyXG5pbXBvcnQgUmVhY3QsIHsgRnJhZ21lbnQgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluayc7XHJcbmltcG9ydCB7IEJ1dHRvbiwgSW5wdXRHcm91cCwgRm9ybUNvbnRyb2wgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xyXG5cclxuY29uc3QgSGVhZGVyID0gKHByb3BzKSA9PiB7XHJcbiAgLy8gY29uc29sZS5sb2coQnV0dG9uKTtcclxuICBjb25zdCBvbkNsaWNrID0gKCkgPT4ge1xyXG4gICAgYWxlcnQoJ2J1dHRvbiBDbGljaycpO1xyXG4gIH07XHJcbiAgcmV0dXJuIChcclxuICAgIDxGcmFnbWVudD5cclxuICAgICAgPGRpdiBpZD1cImhlYWRlclwiPlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxvZ29cIj5cclxuICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cclxuICAgICAgICAgICAgICA8c3Bhbj5EUzwvc3Bhbj5cclxuICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNlYXJjaFwiPlxyXG4gICAgICAgICAgICA8SW5wdXRHcm91cCBjbGFzc05hbWU9XCJtYi0zXCIgaWQ9XCJoZWFkZXJfc2VhcmNoX2lucHV0XCI+XHJcbiAgICAgICAgICAgICAgPEZvcm1Db250cm9sXHJcbiAgICAgICAgICAgICAgICBwbGFjZWhvbGRlcj1cIlVzZXJuYW1lXCJcclxuICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9XCJVc2VybmFtZVwiXHJcbiAgICAgICAgICAgICAgICBhcmlhLWRlc2NyaWJlZGJ5PVwiYmFzaWMtYWRkb24xXCJcclxuICAgICAgICAgICAgICAgIGlkPVwiaGVsbG9cIlxyXG4gICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgPEJ1dHRvbiBvbkNsaWNrPXtvbkNsaWNrfT5cclxuICAgICAgICAgICAgICAgIDxpIGNsYXNzTmFtZT1cImZhIGZhLXNlYXJjaFwiIGFyaWEtaGlkZGVuPVwiZmFsc2VcIiAvPlxyXG4gICAgICAgICAgICAgIDwvQnV0dG9uPlxyXG4gICAgICAgICAgICA8L0lucHV0R3JvdXA+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWVudVwiPlxyXG4gICAgICAgICAgICA8dWw+XHJcbiAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9sb2dpblwiPlxyXG4gICAgICAgICAgICAgICAgICA8YT5tYWluPC9hPlxyXG4gICAgICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cclxuICAgICAgICAgICAgICAgICAgPGE+bWFpbjwvYT5cclxuICAgICAgICAgICAgICAgIDwvTGluaz5cclxuICAgICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgICAgIDxMaW5rIGhyZWY9XCIvXCI+XHJcbiAgICAgICAgICAgICAgICAgIDxhPm1haW48L2E+XHJcbiAgICAgICAgICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgPC91bD5cclxuICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICA8L2Rpdj5cclxuICAgICAgPHN0eWxlIGpzeD5cclxuICAgICAgICB7YFxyXG4gICAgICAgICAgI2hlYWRlciB7XHJcbiAgICAgICAgICAgIGJvcmRlci1ib3R0b206MXB4IHNvbGlkICNjZWQ0ZGE7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICAuY29udGFpbmVye1xyXG4gICAgICAgICAgICBvdmVyZmxvdzpoaWRkZW47XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICAubG9nb3tcclxuICAgICAgICAgICAgZmxvYXQ6bGVmdDtcclxuICAgICAgICAgICAgd2lkdGg6MTIwcHg7XHJcbiAgICAgICAgICAgIGNvbG9yOndoaXRlO1xyXG4gICAgICAgICAgICBtYXJnaW4tcmlnaHQ6NTBweDtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIC5sb2dvIHNwYW57XHJcbiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OjU1cHg7XHJcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6YmxhY2s7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6MTBweDtcclxuICAgICAgICAgICAgZm9udC1zaXplOjIwcHg7XHJcbiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OjcwMDtcclxuICAgICAgICAgICAgY3Vyc29yOnBvaW50ZXI7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICAuc2VhcmNoe1xyXG4gICAgICAgICAgICBwb3NpdGlvbjpyZWxhdGl2ZTtcclxuICAgICAgICAgICAgdG9wOjhweDtcclxuICAgICAgICAgICAgZmxvYXQ6bGVmdDtcclxuICAgICAgICAgICAgd2lkdGg6NDAwcHg7XHJcbiAgICAgICAgICAgIG1hcmdpbi1yaWdodDo1MHB4O1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLm1lbnV7XHJcbiAgICAgICAgICAgIGZsb2F0OnJpZ2h0O1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLm1lbnUgdWx7IGxpbmUtaGVpZ2h0OjU1cHg7fVxyXG4gICAgICAgICAgLm1lbnUgbGl7IGRpc3BsYXk6IGlubGluZTsgbWFyZ2luLWxlZnQ6NTBweDt9XHJcbiAgICAgICAgYH1cclxuICAgICAgPC9zdHlsZT5cclxuICAgIDwvRnJhZ21lbnQ+XHJcbiAgKTtcclxufTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IEhlYWRlcjtcclxuIl19 */\n/*@ sourceURL=D:\\\\Desktop\\\\snsol_project\\\\frontend\\\\components\\\\Header.jsx */"));
+  }, "#header.jsx-3167871876{border-bottom:1px solid #ced4da;}.container.jsx-3167871876{overflow:hidden;}.logo.jsx-3167871876{float:left;width:120px;color:white;margin-right:50px;}.logo.jsx-3167871876 span.jsx-3167871876{line-height:55px;background-color:black;padding:10px;font-size:20px;font-weight:700;cursor:pointer;}.search.jsx-3167871876{position:relative;top:8px;float:left;width:400px;margin-right:50px;}.menu.jsx-3167871876{float:right;}.menu.jsx-3167871876 ul.jsx-3167871876{line-height:55px;}.menu.jsx-3167871876 li.jsx-3167871876{display:inline;margin-left:50px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcSGVhZGVyLmpzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUEwQ1MsQUFHNEMsQUFHaEIsQUFHTCxBQU1NLEFBUUMsQUFPTixBQUVZLEFBQ0QsV0F2QlgsQ0FxQmIsR0FFeUMsQ0ExQnpDLENBU3dCLEFBZ0JFLENBUmpCLEtBYkksR0FjRCxNQXJCWixBQTZCMEMsR0FyQnZCLEVBY04sR0FUQyxTQVVLLElBZG5CLEFBS2dCLGNBVWhCLENBVGlCLGdCQUNELGVBQ2hCIiwiZmlsZSI6IkQ6XFxEZXNrdG9wXFxzbnNvbF9wcm9qZWN0XFxmcm9udGVuZFxcY29tcG9uZW50c1xcSGVhZGVyLmpzeCIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIG5vLWFsZXJ0ICovXHJcbi8qIGVzbGludC1kaXNhYmxlIGpzeC1hMTF5L2FuY2hvci1pcy12YWxpZCAqL1xyXG5pbXBvcnQgUmVhY3QsIHsgRnJhZ21lbnQgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluayc7XHJcbmltcG9ydCB7IEJ1dHRvbiwgSW5wdXRHcm91cCwgRm9ybUNvbnRyb2wgfSBmcm9tICdyZWFjdC1ib290c3RyYXAnO1xyXG5cclxuY29uc3QgSGVhZGVyID0gKHByb3BzKSA9PiB7XHJcbiAgLy8gY29uc29sZS5sb2coQnV0dG9uKTtcclxuICBjb25zdCBvbkNsaWNrID0gKCkgPT4ge1xyXG4gICAgYWxlcnQoJ2J1dHRvbiBDbGljaycpO1xyXG4gIH07XHJcbiAgcmV0dXJuIChcclxuICAgIDxGcmFnbWVudD5cclxuICAgICAgPGRpdiBpZD1cImhlYWRlclwiPlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImxvZ29cIj5cclxuICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cclxuICAgICAgICAgICAgICA8c3Bhbj5EUzwvc3Bhbj5cclxuICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1lbnVcIj5cclxuICAgICAgICAgICAgPHVsPlxyXG4gICAgICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgICAgIDxMaW5rIGhyZWY9XCIvbG9naW5cIj5cclxuICAgICAgICAgICAgICAgICAgPGE+bWFpbjwvYT5cclxuICAgICAgICAgICAgICAgIDwvTGluaz5cclxuICAgICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgICAgIDxMaW5rIGhyZWY9XCIvXCI+XHJcbiAgICAgICAgICAgICAgICAgIDxhPm1haW48L2E+XHJcbiAgICAgICAgICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgICA8bGk+XHJcbiAgICAgICAgICAgICAgICA8TGluayBocmVmPVwiL1wiPlxyXG4gICAgICAgICAgICAgICAgICA8YT5tYWluPC9hPlxyXG4gICAgICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgIDwvdWw+XHJcbiAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxzdHlsZSBqc3g+XHJcbiAgICAgICAge2BcclxuICAgICAgICAgICNoZWFkZXIge1xyXG4gICAgICAgICAgICBib3JkZXItYm90dG9tOjFweCBzb2xpZCAjY2VkNGRhO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLmNvbnRhaW5lcntcclxuICAgICAgICAgICAgb3ZlcmZsb3c6aGlkZGVuO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLmxvZ297XHJcbiAgICAgICAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgICAgICAgICAgIHdpZHRoOjEyMHB4O1xyXG4gICAgICAgICAgICBjb2xvcjp3aGl0ZTtcclxuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OjUwcHg7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICAubG9nbyBzcGFue1xyXG4gICAgICAgICAgICBsaW5lLWhlaWdodDo1NXB4O1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOmJsYWNrO1xyXG4gICAgICAgICAgICBwYWRkaW5nOjEwcHg7XHJcbiAgICAgICAgICAgIGZvbnQtc2l6ZToyMHB4O1xyXG4gICAgICAgICAgICBmb250LXdlaWdodDo3MDA7XHJcbiAgICAgICAgICAgIGN1cnNvcjpwb2ludGVyO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgLnNlYXJjaHtcclxuICAgICAgICAgICAgcG9zaXRpb246cmVsYXRpdmU7XHJcbiAgICAgICAgICAgIHRvcDo4cHg7XHJcbiAgICAgICAgICAgIGZsb2F0OmxlZnQ7XHJcbiAgICAgICAgICAgIHdpZHRoOjQwMHB4O1xyXG4gICAgICAgICAgICBtYXJnaW4tcmlnaHQ6NTBweDtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIC5tZW51e1xyXG4gICAgICAgICAgICBmbG9hdDpyaWdodDtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIC5tZW51IHVseyBsaW5lLWhlaWdodDo1NXB4O31cclxuICAgICAgICAgIC5tZW51IGxpeyBkaXNwbGF5OiBpbmxpbmU7IG1hcmdpbi1sZWZ0OjUwcHg7fVxyXG4gICAgICAgIGB9XHJcbiAgICAgIDwvc3R5bGU+XHJcbiAgICA8L0ZyYWdtZW50PlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIZWFkZXI7XHJcbiJdfQ== */\n/*@ sourceURL=D:\\\\Desktop\\\\snsol_project\\\\frontend\\\\components\\\\Header.jsx */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -60187,6 +60172,94 @@ RootApp.getInitialProps = function _callee(context) {
 
 /***/ }),
 
+/***/ "./redux/reducers/cardReducer.js":
+/*!***************************************!*\
+  !*** ./redux/reducers/cardReducer.js ***!
+  \***************************************/
+/*! exports provided: FETCH_CARDS_START_STARTED, FETCH_CARDS_SUCCESS_STARTED, FETCH_CARDS_FAIL_STARTED, FETCH_CARDS_START, initialState, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_START_STARTED", function() { return FETCH_CARDS_START_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_SUCCESS_STARTED", function() { return FETCH_CARDS_SUCCESS_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_FAIL_STARTED", function() { return FETCH_CARDS_FAIL_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_START", function() { return FETCH_CARDS_START; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-properties */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptors */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+
+
+
+
+
+
+
+
+function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
+
+/* eslint-disable camelcase */
+var FETCH_CARDS_START_STARTED = 'FETCH_CARDS_START_STARTED';
+var FETCH_CARDS_SUCCESS_STARTED = 'FETCH_CARDS_SUCCESS_STARTED';
+var FETCH_CARDS_FAIL_STARTED = 'FETCH_CARDS_FAIL_STARTED';
+var FETCH_CARDS_START = 'FETCH_CARDS_START';
+var initialState = {
+  fetchState: '',
+  card: []
+};
+
+var cardReducer = function cardReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case FETCH_CARDS_START_STARTED:
+      {
+        return _objectSpread({}, state, {
+          fetchState: 'card_fetching'
+        });
+      }
+
+    case FETCH_CARDS_SUCCESS_STARTED:
+      {
+        // console.log(action.payload);
+        return _objectSpread({}, state, {
+          card: action.payload,
+          fetchState: 'card_fetching_success'
+        });
+      }
+
+    case FETCH_CARDS_FAIL_STARTED:
+      {
+        return _objectSpread({}, state, {
+          fetchState: 'card_fetching_fail'
+        });
+      }
+
+    default:
+      {
+        return state;
+      }
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (cardReducer);
+
+/***/ }),
+
 /***/ "./redux/reducers/counterReducer.js":
 /*!******************************************!*\
   !*** ./redux/reducers/counterReducer.js ***!
@@ -60360,7 +60433,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sagaCounterReducer */ "./redux/reducers/sagaCounterReducer.js");
 /* harmony import */ var _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./thunkCounterReducer */ "./redux/reducers/thunkCounterReducer.js");
 /* harmony import */ var _followReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./followReducer */ "./redux/reducers/followReducer.js");
-/* harmony import */ var _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sagaLoginReducer */ "./redux/reducers/sagaLoginReducer.js");
+/* harmony import */ var _cardReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cardReducer */ "./redux/reducers/cardReducer.js");
+/* harmony import */ var _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sagaLoginReducer */ "./redux/reducers/sagaLoginReducer.js");
+
 
 
 
@@ -60372,7 +60447,8 @@ var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(
   sagaCounter: _sagaCounterReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   thunkCounter: _thunkCounterReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
   follow: _followReducer__WEBPACK_IMPORTED_MODULE_4__["default"],
-  sagaLogin: _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_5__["default"]
+  card: _cardReducer__WEBPACK_IMPORTED_MODULE_5__["default"],
+  sagaLogin: _sagaLoginReducer__WEBPACK_IMPORTED_MODULE_6__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -60711,6 +60787,94 @@ var thunkCounterReducer = function thunkCounterReducer() {
 
 /***/ }),
 
+/***/ "./redux/sagas/card.js":
+/*!*****************************!*\
+  !*** ./redux/sagas/card.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/cardReducer */ "./redux/reducers/cardReducer.js");
+
+
+
+ // import { SAGA_SIGN_IN } from '../reducers/sagaLoginReducer';
+
+var fetchCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function fetchFollowing(action) {
+  var _ref, data;
+
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function fetchFollowing$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.prev = 0;
+          _context.next = 3;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["FETCH_CARDS_START_STARTED"]
+          });
+
+        case 3:
+          _context.next = 5;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])([axios__WEBPACK_IMPORTED_MODULE_2___default.a, 'get'], "http://127.0.0.1:3001/cards?userId=".concat(action.payload), {
+            withCredentials: true
+          });
+
+        case 5:
+          _ref = _context.sent;
+          data = _ref.data;
+          _context.next = 9;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["FETCH_CARDS_SUCCESS_STARTED"],
+            payload: data
+          });
+
+        case 9:
+          _context.next = 15;
+          break;
+
+        case 11:
+          _context.prev = 11;
+          _context.t0 = _context["catch"](0);
+          _context.next = 15;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["FETCH_CARDS_FAIL_STARTED"]
+          });
+
+        case 15:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, fetchFollowing, null, [[0, 11]]);
+});
+
+var watchFetchCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchFetchCard() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchFetchCard$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["FETCH_CARDS_START"], fetchCard);
+
+        case 2:
+        case "end":
+          return _context2.stop();
+      }
+    }
+  }, watchFetchCard);
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (watchFetchCard);
+
+/***/ }),
+
 /***/ "./redux/sagas/follow.js":
 /*!*******************************!*\
   !*** ./redux/sagas/follow.js ***!
@@ -60739,35 +60903,34 @@ var fetchFollowing = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IM
       switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          console.log(action.payload);
-          _context.next = 4;
+          _context.next = 3;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])([axios__WEBPACK_IMPORTED_MODULE_2___default.a, 'get'], "http://127.0.0.1:3001/follow?userId=".concat(action.payload), {
             withCredentials: true
           });
 
-        case 4:
+        case 3:
           _ref = _context.sent;
           data = _ref.data;
-          _context.next = 8;
+          _context.next = 7;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
             type: _reducers_followReducer__WEBPACK_IMPORTED_MODULE_3__["FETCH_FOLLOW_COUNT_VALUE_STATED"],
             payload: data
           });
 
-        case 8:
-          _context.next = 12;
+        case 7:
+          _context.next = 11;
           break;
 
-        case 10:
-          _context.prev = 10;
+        case 9:
+          _context.prev = 9;
           _context.t0 = _context["catch"](0);
 
-        case 12:
+        case 11:
         case "end":
           return _context.stop();
       }
     }
-  }, fetchFollowing, null, [[0, 10]]);
+  }, fetchFollowing, null, [[0, 9]]);
 });
 
 var watchFollow = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchFollow() {
@@ -61047,9 +61210,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
 /* harmony import */ var _login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./login */ "./redux/sagas/login.js");
 /* harmony import */ var _follow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./follow */ "./redux/sagas/follow.js");
+/* harmony import */ var _card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./card */ "./redux/sagas/card.js");
 
 
 var _marked = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(rootSaga);
+
 
 
 
@@ -61061,7 +61226,7 @@ function rootSaga() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSession"])(), Object(_follow__WEBPACK_IMPORTED_MODULE_3__["default"])()]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSession"])(), Object(_follow__WEBPACK_IMPORTED_MODULE_3__["default"])(), Object(_card__WEBPACK_IMPORTED_MODULE_4__["default"])()]);
 
         case 2:
         case "end":
