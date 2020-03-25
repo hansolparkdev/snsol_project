@@ -1,7 +1,7 @@
 const express = require('express');
 const {
-  User, Follow,
-  Card, Sequelize: { Op },
+  User, Follow, Like,
+  Card, Sequelize: { Op }, sequelize,
 } = require('../models');
 
 const router = express.Router();
@@ -41,15 +41,14 @@ router.get('/cards', async (req, res) => {
         { user_id: userId },
       ],
     },
-    include: [{
-      model: Follow,
-      as: 'follow',
-    }],
+    include: [
+      { model: Follow, as: 'follow' },
+      { model: Like },
+    ],
     order: [
       ['createdAt', 'desc'],
     ],
   });
-  console.log(result);
   res.send(result);
 });
 
