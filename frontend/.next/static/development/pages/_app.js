@@ -572,6 +572,31 @@ module.exports = _createClass;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+
+function _arrayWithoutHoles(arr) {
+  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
@@ -598,6 +623,66 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/is-iterable */ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js");
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _iterableToArray(iter) {
+  if (_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default()(Object(iter)) || Object.prototype.toString.call(iter) === "[object Arguments]") return _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()(iter);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
+/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js");
+/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js");
+
+
+
+function _toConsumableArray(arr) {
+  return Object(_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
 
 /***/ }),
@@ -2693,7 +2778,7 @@ var defaultTheme = Object(_createMuiTheme__WEBPACK_IMPORTED_MODULE_0__["default"
 /*!************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/styles/index.js ***!
   \************************************************************/
-/*! exports provided: createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider, hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, easing, duration */
+/*! exports provided: hexToRgb, rgbToHex, hslToRgb, decomposeColor, recomposeColor, getContrastRatio, getLuminance, emphasize, fade, darken, lighten, createMuiTheme, createStyles, makeStyles, responsiveFontSizes, styled, easing, duration, useTheme, withStyles, withTheme, createGenerateClassName, jssPreset, ServerStyleSheets, StylesProvider, MuiThemeProvider, ThemeProvider */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56118,7 +56203,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_0fb095e325d7ebf261c3
 /*!***********************************************************************!*\
   !*** ./node_modules/redux-saga/dist/redux-saga-core-npm-proxy.esm.js ***!
   \***********************************************************************/
-/*! exports provided: default, CANCEL, SAGA_LOCATION, buffers, detach, END, channel, eventChannel, isEnd, multicastChannel, runSaga, stdChannel */
+/*! exports provided: CANCEL, SAGA_LOCATION, buffers, detach, END, channel, eventChannel, isEnd, multicastChannel, runSaga, stdChannel, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60176,7 +60261,7 @@ RootApp.getInitialProps = function _callee(context) {
 /*!***************************************!*\
   !*** ./redux/reducers/cardReducer.js ***!
   \***************************************/
-/*! exports provided: FETCH_CARDS_START_STARTED, FETCH_CARDS_SUCCESS_STARTED, FETCH_CARDS_FAIL_STARTED, FETCH_CARDS_START, initialState, default */
+/*! exports provided: FETCH_CARDS_START_STARTED, FETCH_CARDS_SUCCESS_STARTED, FETCH_CARDS_FAIL_STARTED, LIKE_CARD_SUCCESS, LIKE_CARDS_FAIL, UNLIKE_CARD_SUCCESS, UNLIKE_CARDS_FAIL, ADD_CARD_REPLY_SUCCESS, ADD_CARD_REPLY_FAIL, DEL_CARD_REPLY_SUCCESS, DEL_CARD_REPLY_FAIL, FETCH_CARDS_START, LIKE_CARD_REQUEST, UNLIKE_CARD_REQUEST, ADD_CARD_REPLY_REQUEST, DEL_CARD_REPLY_REQUEST, initialState, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60184,7 +60269,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_START_STARTED", function() { return FETCH_CARDS_START_STARTED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_SUCCESS_STARTED", function() { return FETCH_CARDS_SUCCESS_STARTED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_FAIL_STARTED", function() { return FETCH_CARDS_FAIL_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_CARD_SUCCESS", function() { return LIKE_CARD_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_CARDS_FAIL", function() { return LIKE_CARDS_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_CARD_SUCCESS", function() { return UNLIKE_CARD_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_CARDS_FAIL", function() { return UNLIKE_CARDS_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CARD_REPLY_SUCCESS", function() { return ADD_CARD_REPLY_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CARD_REPLY_FAIL", function() { return ADD_CARD_REPLY_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEL_CARD_REPLY_SUCCESS", function() { return DEL_CARD_REPLY_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEL_CARD_REPLY_FAIL", function() { return DEL_CARD_REPLY_FAIL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_START", function() { return FETCH_CARDS_START; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_CARD_REQUEST", function() { return LIKE_CARD_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_CARD_REQUEST", function() { return UNLIKE_CARD_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CARD_REPLY_REQUEST", function() { return ADD_CARD_REPLY_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEL_CARD_REPLY_REQUEST", function() { return DEL_CARD_REPLY_REQUEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
@@ -60198,7 +60295,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+
 
 
 
@@ -60209,13 +60308,28 @@ __webpack_require__.r(__webpack_exports__);
 
 function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
+
+/* eslint-disable max-len */
 
 /* eslint-disable camelcase */
 var FETCH_CARDS_START_STARTED = 'FETCH_CARDS_START_STARTED';
 var FETCH_CARDS_SUCCESS_STARTED = 'FETCH_CARDS_SUCCESS_STARTED';
 var FETCH_CARDS_FAIL_STARTED = 'FETCH_CARDS_FAIL_STARTED';
+var LIKE_CARD_SUCCESS = 'LIKE_CARD_SUCCESS';
+var LIKE_CARDS_FAIL = 'LIKE_CARDS_FAIL';
+var UNLIKE_CARD_SUCCESS = 'UNLIKE_CARD_SUCCESS';
+var UNLIKE_CARDS_FAIL = 'UNLIKE_CARDS_FAIL';
+var ADD_CARD_REPLY_SUCCESS = 'ADD_CARD_REPLY_SUCCESS';
+var ADD_CARD_REPLY_FAIL = 'ADD_CARD_REPLY_FAIL';
+var DEL_CARD_REPLY_SUCCESS = 'DEL_CARD_REPLY_SUCCESS';
+var DEL_CARD_REPLY_FAIL = 'DEL_CARD_REPLY_FAIL'; // 사가에서 가로챌 액션 값
+
 var FETCH_CARDS_START = 'FETCH_CARDS_START';
+var LIKE_CARD_REQUEST = 'LIKE_CARD_REQUEST';
+var UNLIKE_CARD_REQUEST = 'UNLIKE_CARD_REQUEST';
+var ADD_CARD_REPLY_REQUEST = 'ADD_CARD_REPLY_REQUEST';
+var DEL_CARD_REPLY_REQUEST = 'DEL_CARD_REPLY_REQUEST';
 var initialState = {
   fetchState: '',
   card: []
@@ -60246,6 +60360,55 @@ var cardReducer = function cardReducer() {
       {
         return _objectSpread({}, state, {
           fetchState: 'card_fetching_fail'
+        });
+      }
+
+    case LIKE_CARD_SUCCESS:
+      {
+        var card = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__["default"])(state.card);
+
+        var cardIndex = card.findIndex(function (v) {
+          return v.board_id === action.payload.board_id;
+        });
+        card[cardIndex].likes = card[cardIndex].likes.concat(action.payload);
+        return _objectSpread({}, state, {
+          card: card
+        });
+      }
+
+    case UNLIKE_CARD_SUCCESS:
+      {
+        var _card = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__["default"])(state.card);
+
+        var _cardIndex = _card.findIndex(function (v) {
+          return v.board_id === action.payload.boardId;
+        });
+
+        var likeIndex = _card[_cardIndex].likes.findIndex(function (v) {
+          return v.user_id === action.payload.userId;
+        });
+
+        _card[_cardIndex].likes.splice(likeIndex, 1);
+
+        return _objectSpread({}, state, {
+          card: _card
+        });
+      }
+
+    case ADD_CARD_REPLY_SUCCESS:
+      {
+        var _card2 = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__["default"])(state.card);
+
+        console.log(action.payload);
+
+        var _cardIndex2 = _card2.findIndex(function (v) {
+          return v.board_id === action.payload.board_id;
+        });
+
+        _card2[_cardIndex2].replies = _card2[_cardIndex2].replies.concat(action.payload); // console.log(card[cardIndex].replies);
+
+        return _objectSpread({}, state, {
+          card: _card2
         });
       }
 
@@ -60791,11 +60954,16 @@ var thunkCounterReducer = function thunkCounterReducer() {
 /*!*****************************!*\
   !*** ./redux/sagas/card.js ***!
   \*****************************/
-/*! exports provided: default */
+/*! exports provided: watchFetchCard, watchLikeCard, watchUnLikeCard, watchAddReply, watchDelReply */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchFetchCard", function() { return watchFetchCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchLikeCard", function() { return watchLikeCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchUnLikeCard", function() { return watchUnLikeCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchAddReply", function() { return watchAddReply; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchDelReply", function() { return watchDelReply; });
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-saga/effects */ "./node_modules/redux-saga/dist/redux-saga-effects-npm-proxy.esm.js");
@@ -60855,23 +61023,283 @@ var fetchCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTE
   }, fetchFollowing, null, [[0, 11]]);
 });
 
-var watchFetchCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchFetchCard() {
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchFetchCard$(_context2) {
+var likeCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function LikeCard(action) {
+  var likeData, _ref2, data;
+
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function LikeCard$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
-          _context2.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["FETCH_CARDS_START"], fetchCard);
+          _context2.prev = 0;
+          likeData = {
+            boardId: action.payload.board_id,
+            userId: action.payload.username
+          }; // console.log(likeData);
 
-        case 2:
+          _context2.next = 4;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])([axios__WEBPACK_IMPORTED_MODULE_2___default.a, 'post'], 'http://127.0.0.1:3001/insertLike', likeData, {
+            withCredentials: true
+          });
+
+        case 4:
+          _ref2 = _context2.sent;
+          data = _ref2.data;
+          _context2.next = 8;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["LIKE_CARD_SUCCESS"],
+            payload: data
+          });
+
+        case 8:
+          _context2.next = 14;
+          break;
+
+        case 10:
+          _context2.prev = 10;
+          _context2.t0 = _context2["catch"](0);
+          _context2.next = 14;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["LIKE_CARDS_FAIL"]
+          });
+
+        case 14:
         case "end":
           return _context2.stop();
       }
     }
-  }, watchFetchCard);
+  }, LikeCard, null, [[0, 10]]);
 });
 
-/* harmony default export */ __webpack_exports__["default"] = (watchFetchCard);
+var unLikeCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function LikeCard(action) {
+  var unlikeData, _ref3, data;
+
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function LikeCard$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.prev = 0;
+          unlikeData = {
+            // index: action.payload.index,
+            boardId: action.payload.board_id,
+            userId: action.payload.username
+          }; // console.log(unlikeData);
+
+          _context3.next = 4;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])([axios__WEBPACK_IMPORTED_MODULE_2___default.a, 'post'], 'http://127.0.0.1:3001/deleteLike', unlikeData, {
+            withCredentials: true
+          });
+
+        case 4:
+          _ref3 = _context3.sent;
+          data = _ref3.data;
+
+          if (!(data === true)) {
+            _context3.next = 9;
+            break;
+          }
+
+          _context3.next = 9;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["UNLIKE_CARD_SUCCESS"],
+            payload: unlikeData
+          });
+
+        case 9:
+          _context3.next = 15;
+          break;
+
+        case 11:
+          _context3.prev = 11;
+          _context3.t0 = _context3["catch"](0);
+          _context3.next = 15;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["UNLIKE_CARDS_FAIL"]
+          });
+
+        case 15:
+        case "end":
+          return _context3.stop();
+      }
+    }
+  }, LikeCard, null, [[0, 11]]);
+});
+
+var addReply = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function addReply(action) {
+  var addReplyData, _ref4, data;
+
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function addReply$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          _context4.prev = 0;
+          addReplyData = {
+            // index: action.payload.index,
+            boardId: action.payload.board_id,
+            userId: action.payload.username,
+            desc: action.payload.desc
+          };
+          _context4.next = 4;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])([axios__WEBPACK_IMPORTED_MODULE_2___default.a, 'post'], 'http://127.0.0.1:3001/addReply', addReplyData, {
+            withCredentials: true
+          });
+
+        case 4:
+          _ref4 = _context4.sent;
+          data = _ref4.data;
+          _context4.next = 8;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["ADD_CARD_REPLY_SUCCESS"],
+            payload: data
+          });
+
+        case 8:
+          _context4.next = 14;
+          break;
+
+        case 10:
+          _context4.prev = 10;
+          _context4.t0 = _context4["catch"](0);
+          _context4.next = 14;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["ADD_CARD_REPLY_FAIL"]
+          });
+
+        case 14:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, addReply, null, [[0, 10]]);
+});
+
+var delReply = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function delReply(action) {
+  var delReplyData, _ref5, data;
+
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function delReply$(_context5) {
+    while (1) {
+      switch (_context5.prev = _context5.next) {
+        case 0:
+          _context5.prev = 0;
+          delReplyData = {
+            reple_id: action.payload.reple_id,
+            boardId: action.payload.board_id,
+            userId: action.payload.username
+          };
+          _context5.next = 4;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])([axios__WEBPACK_IMPORTED_MODULE_2___default.a, 'post'], 'http://127.0.0.1:3001/delReply', delReplyData, {
+            withCredentials: true
+          });
+
+        case 4:
+          _ref5 = _context5.sent;
+          data = _ref5.data;
+
+          if (!(data === true)) {
+            _context5.next = 9;
+            break;
+          }
+
+          _context5.next = 9;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["DEL_CARD_REPLY_SUCCESS"],
+            payload: delReplyData
+          });
+
+        case 9:
+          _context5.next = 15;
+          break;
+
+        case 11:
+          _context5.prev = 11;
+          _context5.t0 = _context5["catch"](0);
+          _context5.next = 15;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])({
+            type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["DEL_CARD_REPLY_FAIL"]
+          });
+
+        case 15:
+        case "end":
+          return _context5.stop();
+      }
+    }
+  }, delReply, null, [[0, 11]]);
+});
+
+var watchFetchCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchFetchCard() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchFetchCard$(_context6) {
+    while (1) {
+      switch (_context6.prev = _context6.next) {
+        case 0:
+          _context6.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["FETCH_CARDS_START"], fetchCard);
+
+        case 2:
+        case "end":
+          return _context6.stop();
+      }
+    }
+  }, watchFetchCard);
+});
+var watchLikeCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchLikeCard() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchLikeCard$(_context7) {
+    while (1) {
+      switch (_context7.prev = _context7.next) {
+        case 0:
+          _context7.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["LIKE_CARD_REQUEST"], likeCard);
+
+        case 2:
+        case "end":
+          return _context7.stop();
+      }
+    }
+  }, watchLikeCard);
+});
+var watchUnLikeCard = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchUnLikeCard() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchUnLikeCard$(_context8) {
+    while (1) {
+      switch (_context8.prev = _context8.next) {
+        case 0:
+          _context8.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["UNLIKE_CARD_REQUEST"], unLikeCard);
+
+        case 2:
+        case "end":
+          return _context8.stop();
+      }
+    }
+  }, watchUnLikeCard);
+});
+var watchAddReply = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchAddReply() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchAddReply$(_context9) {
+    while (1) {
+      switch (_context9.prev = _context9.next) {
+        case 0:
+          _context9.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["ADD_CARD_REPLY_REQUEST"], addReply);
+
+        case 2:
+        case "end":
+          return _context9.stop();
+      }
+    }
+  }, watchAddReply);
+});
+var watchDelReply = /*#__PURE__*/_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function watchDelReply() {
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchDelReply$(_context10) {
+    while (1) {
+      switch (_context10.prev = _context10.next) {
+        case 0:
+          _context10.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_3__["DEL_CARD_REPLY_REQUEST"], delReply);
+
+        case 2:
+        case "end":
+          return _context10.stop();
+      }
+    }
+  }, watchDelReply);
+});
 
 /***/ }),
 
@@ -61226,7 +61654,7 @@ function rootSaga() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSession"])(), Object(_follow__WEBPACK_IMPORTED_MODULE_3__["default"])(), Object(_card__WEBPACK_IMPORTED_MODULE_4__["default"])()]);
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_2__["watchSession"])(), Object(_follow__WEBPACK_IMPORTED_MODULE_3__["default"])(), Object(_card__WEBPACK_IMPORTED_MODULE_4__["watchFetchCard"])(), Object(_card__WEBPACK_IMPORTED_MODULE_4__["watchLikeCard"])(), Object(_card__WEBPACK_IMPORTED_MODULE_4__["watchUnLikeCard"])(), Object(_card__WEBPACK_IMPORTED_MODULE_4__["watchAddReply"])(), Object(_card__WEBPACK_IMPORTED_MODULE_4__["watchDelReply"])()]);
 
         case 2:
         case "end":

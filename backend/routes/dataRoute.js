@@ -1,6 +1,7 @@
+/* eslint-disable camelcase */
 const express = require('express');
 const {
-  User, Follow, Like,
+  User, Follow, Like, Reply,
   Card, Sequelize: { Op }, sequelize,
 } = require('../models');
 
@@ -34,7 +35,7 @@ router.get('/follow', async (req, res) => {
 router.get('/cards', async (req, res) => {
   const { userId } = req.query;
   const result = await Card.findAll({
-    attributes: ['title', 'desc', 'user_id'],
+    attributes: ['board_id', 'title', 'desc', 'user_id'],
     where: {
       [Op.or]: [
         { '$follow.followingId$': userId },
@@ -44,12 +45,69 @@ router.get('/cards', async (req, res) => {
     include: [
       { model: Follow, as: 'follow' },
       { model: Like },
+      { model: Reply },
     ],
     order: [
       ['createdAt', 'desc'],
     ],
   });
   res.send(result);
+});
+
+router.post('/insertLike', async (req, res) => {
+  const { boardId, userId } = req.body;
+  // console.log(boardId);
+  // console.log(userId);
+  const newLike = {
+    board_id: boardId,
+    user_id: userId,
+  };
+  const result = await Like.create(newLike);
+  res.send(result);
+});
+
+router.post('/deleteLike', async (req, res) => {
+  try {
+    const { boardId, userId } = req.body;
+    // console.log(boardId);
+    // console.log(userId);
+    const deleteLike = {
+      board_id: boardId,
+      user_id: userId,
+    };
+    const result = await Like.destroy({ where: deleteLike });
+    // console.log(result);
+    res.send(true);
+  } catch (e) {
+    res.send('error');
+  }
+});
+
+router.post('/addReply', async (req, res) => {
+  const { boardId, userId, desc } = req.body;
+  // console.log(boardId);
+  // console.log(userId);
+  const newLike = {
+    board_id: boardId,
+    user_id: userId,
+    desc,
+  };
+  const result = await Reply.create(newLike);
+  res.send(result);
+});
+
+router.post('/delReply', async (req, res) => {
+  try {
+    const { reple_id } = req.body;
+
+    const deleteReply = {
+      id: reple_id,
+    };
+    await Reply.destroy({ where: deleteReply });
+    res.send(true);
+  } catch (e) {
+    res.send('error');
+  }
 });
 
 module.exports = router;

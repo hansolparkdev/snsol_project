@@ -2093,7 +2093,7 @@ RootApp.getInitialProps = async context => {
 /*!***************************************!*\
   !*** ./redux/reducers/cardReducer.js ***!
   \***************************************/
-/*! exports provided: FETCH_CARDS_START_STARTED, FETCH_CARDS_SUCCESS_STARTED, FETCH_CARDS_FAIL_STARTED, FETCH_CARDS_START, initialState, default */
+/*! exports provided: FETCH_CARDS_START_STARTED, FETCH_CARDS_SUCCESS_STARTED, FETCH_CARDS_FAIL_STARTED, LIKE_CARD_SUCCESS, LIKE_CARDS_FAIL, UNLIKE_CARD_SUCCESS, UNLIKE_CARDS_FAIL, ADD_CARD_REPLY_SUCCESS, ADD_CARD_REPLY_FAIL, DEL_CARD_REPLY_SUCCESS, DEL_CARD_REPLY_FAIL, FETCH_CARDS_START, LIKE_CARD_REQUEST, UNLIKE_CARD_REQUEST, ADD_CARD_REPLY_REQUEST, DEL_CARD_REPLY_REQUEST, initialState, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2101,7 +2101,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_START_STARTED", function() { return FETCH_CARDS_START_STARTED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_SUCCESS_STARTED", function() { return FETCH_CARDS_SUCCESS_STARTED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_FAIL_STARTED", function() { return FETCH_CARDS_FAIL_STARTED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_CARD_SUCCESS", function() { return LIKE_CARD_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_CARDS_FAIL", function() { return LIKE_CARDS_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_CARD_SUCCESS", function() { return UNLIKE_CARD_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_CARDS_FAIL", function() { return UNLIKE_CARDS_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CARD_REPLY_SUCCESS", function() { return ADD_CARD_REPLY_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CARD_REPLY_FAIL", function() { return ADD_CARD_REPLY_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEL_CARD_REPLY_SUCCESS", function() { return DEL_CARD_REPLY_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEL_CARD_REPLY_FAIL", function() { return DEL_CARD_REPLY_FAIL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_CARDS_START", function() { return FETCH_CARDS_START; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LIKE_CARD_REQUEST", function() { return LIKE_CARD_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UNLIKE_CARD_REQUEST", function() { return UNLIKE_CARD_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ADD_CARD_REPLY_REQUEST", function() { return ADD_CARD_REPLY_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEL_CARD_REPLY_REQUEST", function() { return DEL_CARD_REPLY_REQUEST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -2109,11 +2121,26 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+/* eslint-disable max-len */
+
 /* eslint-disable camelcase */
 const FETCH_CARDS_START_STARTED = 'FETCH_CARDS_START_STARTED';
 const FETCH_CARDS_SUCCESS_STARTED = 'FETCH_CARDS_SUCCESS_STARTED';
 const FETCH_CARDS_FAIL_STARTED = 'FETCH_CARDS_FAIL_STARTED';
+const LIKE_CARD_SUCCESS = 'LIKE_CARD_SUCCESS';
+const LIKE_CARDS_FAIL = 'LIKE_CARDS_FAIL';
+const UNLIKE_CARD_SUCCESS = 'UNLIKE_CARD_SUCCESS';
+const UNLIKE_CARDS_FAIL = 'UNLIKE_CARDS_FAIL';
+const ADD_CARD_REPLY_SUCCESS = 'ADD_CARD_REPLY_SUCCESS';
+const ADD_CARD_REPLY_FAIL = 'ADD_CARD_REPLY_FAIL';
+const DEL_CARD_REPLY_SUCCESS = 'DEL_CARD_REPLY_SUCCESS';
+const DEL_CARD_REPLY_FAIL = 'DEL_CARD_REPLY_FAIL'; // 사가에서 가로챌 액션 값
+
 const FETCH_CARDS_START = 'FETCH_CARDS_START';
+const LIKE_CARD_REQUEST = 'LIKE_CARD_REQUEST';
+const UNLIKE_CARD_REQUEST = 'UNLIKE_CARD_REQUEST';
+const ADD_CARD_REPLY_REQUEST = 'ADD_CARD_REPLY_REQUEST';
+const DEL_CARD_REPLY_REQUEST = 'DEL_CARD_REPLY_REQUEST';
 const initialState = {
   fetchState: '',
   card: []
@@ -2141,6 +2168,39 @@ const cardReducer = (state = initialState, action) => {
       {
         return _objectSpread({}, state, {
           fetchState: 'card_fetching_fail'
+        });
+      }
+
+    case LIKE_CARD_SUCCESS:
+      {
+        const card = [...state.card];
+        const cardIndex = card.findIndex(v => v.board_id === action.payload.board_id);
+        card[cardIndex].likes = card[cardIndex].likes.concat(action.payload);
+        return _objectSpread({}, state, {
+          card
+        });
+      }
+
+    case UNLIKE_CARD_SUCCESS:
+      {
+        const card = [...state.card];
+        const cardIndex = card.findIndex(v => v.board_id === action.payload.boardId);
+        const likeIndex = card[cardIndex].likes.findIndex(v => v.user_id === action.payload.userId);
+        card[cardIndex].likes.splice(likeIndex, 1);
+        return _objectSpread({}, state, {
+          card
+        });
+      }
+
+    case ADD_CARD_REPLY_SUCCESS:
+      {
+        const card = [...state.card];
+        console.log(action.payload);
+        const cardIndex = card.findIndex(v => v.board_id === action.payload.board_id);
+        card[cardIndex].replies = card[cardIndex].replies.concat(action.payload); // console.log(card[cardIndex].replies);
+
+        return _objectSpread({}, state, {
+          card
         });
       }
 
@@ -2563,11 +2623,16 @@ const thunkCounterReducer = (state = initialState, action) => {
 /*!*****************************!*\
   !*** ./redux/sagas/card.js ***!
   \*****************************/
-/*! exports provided: default */
+/*! exports provided: watchFetchCard, watchLikeCard, watchUnLikeCard, watchAddReply, watchDelReply */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchFetchCard", function() { return watchFetchCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchLikeCard", function() { return watchLikeCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchUnLikeCard", function() { return watchUnLikeCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchAddReply", function() { return watchAddReply; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "watchDelReply", function() { return watchDelReply; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
@@ -2598,11 +2663,122 @@ const fetchCard = function* fetchFollowing(action) {
   }
 };
 
+const likeCard = function* LikeCard(action) {
+  try {
+    const likeData = {
+      boardId: action.payload.board_id,
+      userId: action.payload.username
+    }; // console.log(likeData);
+
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])([axios__WEBPACK_IMPORTED_MODULE_1___default.a, 'post'], 'http://127.0.0.1:3001/insertLike', likeData, {
+      withCredentials: true
+    }); // console.log(data);
+
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["LIKE_CARD_SUCCESS"],
+      payload: data
+    });
+  } catch (e) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["LIKE_CARDS_FAIL"]
+    });
+  }
+};
+
+const unLikeCard = function* LikeCard(action) {
+  try {
+    const unlikeData = {
+      // index: action.payload.index,
+      boardId: action.payload.board_id,
+      userId: action.payload.username
+    }; // console.log(unlikeData);
+
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])([axios__WEBPACK_IMPORTED_MODULE_1___default.a, 'post'], 'http://127.0.0.1:3001/deleteLike', unlikeData, {
+      withCredentials: true
+    });
+
+    if (data === true) {
+      yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+        type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["UNLIKE_CARD_SUCCESS"],
+        payload: unlikeData
+      });
+    }
+  } catch (e) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["UNLIKE_CARDS_FAIL"]
+    });
+  }
+};
+
+const addReply = function* addReply(action) {
+  try {
+    const addReplyData = {
+      // index: action.payload.index,
+      boardId: action.payload.board_id,
+      userId: action.payload.username,
+      desc: action.payload.desc
+    };
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])([axios__WEBPACK_IMPORTED_MODULE_1___default.a, 'post'], 'http://127.0.0.1:3001/addReply', addReplyData, {
+      withCredentials: true
+    });
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["ADD_CARD_REPLY_SUCCESS"],
+      payload: data
+    });
+  } catch (e) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["ADD_CARD_REPLY_FAIL"]
+    });
+  }
+};
+
+const delReply = function* delReply(action) {
+  try {
+    const delReplyData = {
+      reple_id: action.payload.reple_id,
+      boardId: action.payload.board_id,
+      userId: action.payload.username
+    };
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])([axios__WEBPACK_IMPORTED_MODULE_1___default.a, 'post'], 'http://127.0.0.1:3001/delReply', delReplyData, {
+      withCredentials: true
+    });
+
+    if (data === true) {
+      yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+        type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["DEL_CARD_REPLY_SUCCESS"],
+        payload: delReplyData
+      });
+    }
+  } catch (e) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])({
+      type: _reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["DEL_CARD_REPLY_FAIL"]
+    });
+  }
+};
+
 const watchFetchCard = function* watchFetchCard() {
   yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["FETCH_CARDS_START"], fetchCard);
 };
-
-/* harmony default export */ __webpack_exports__["default"] = (watchFetchCard);
+const watchLikeCard = function* watchLikeCard() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["LIKE_CARD_REQUEST"], likeCard);
+};
+const watchUnLikeCard = function* watchUnLikeCard() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["UNLIKE_CARD_REQUEST"], unLikeCard);
+};
+const watchAddReply = function* watchAddReply() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["ADD_CARD_REPLY_REQUEST"], addReply);
+};
+const watchDelReply = function* watchDelReply() {
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["takeEvery"])(_reducers_cardReducer__WEBPACK_IMPORTED_MODULE_2__["DEL_CARD_REPLY_REQUEST"], delReply);
+};
 
 /***/ }),
 
@@ -2775,7 +2951,7 @@ __webpack_require__.r(__webpack_exports__);
  // all 함수를 통해 Saga들을 하나로 묶어줄수 있다.
 
 function* rootSaga() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSession"])(), Object(_follow__WEBPACK_IMPORTED_MODULE_2__["default"])(), Object(_card__WEBPACK_IMPORTED_MODULE_3__["default"])()]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUsername"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSetUserpassword"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchLogin"])(), Object(_login__WEBPACK_IMPORTED_MODULE_1__["watchSession"])(), Object(_follow__WEBPACK_IMPORTED_MODULE_2__["default"])(), Object(_card__WEBPACK_IMPORTED_MODULE_3__["watchFetchCard"])(), Object(_card__WEBPACK_IMPORTED_MODULE_3__["watchLikeCard"])(), Object(_card__WEBPACK_IMPORTED_MODULE_3__["watchUnLikeCard"])(), Object(_card__WEBPACK_IMPORTED_MODULE_3__["watchAddReply"])(), Object(_card__WEBPACK_IMPORTED_MODULE_3__["watchDelReply"])()]);
 }
 
 /***/ }),
